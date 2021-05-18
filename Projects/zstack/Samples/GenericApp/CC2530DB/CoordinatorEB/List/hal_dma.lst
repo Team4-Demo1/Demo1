@@ -1,6 +1,6 @@
 ###############################################################################
 #                                                                             #
-# IAR C/C++ Compiler V8.10.3.10338/W32 for 8051         18/May/2021  10:42:49 #
+# IAR C/C++ Compiler V8.10.3.10338/W32 for 8051         18/May/2021  15:37:01 #
 # Copyright 2004-2011 IAR Systems AB.                                         #
 #                                                                             #
 #    Core               =  plain                                              #
@@ -20,8 +20,8 @@
 #                          ojects\zstack\Samples\GenericApp\CC2530DB\..\..\.. #
 #                          \Tools\CC2530DB\f8wConfig.cfg" (-DSECURE=0         #
 #                          -DZG_SECURE_DYNAMIC=0 -DREFLECTOR                  #
-#                          -DDEFAULT_CHANLIST=0x00000800                      #
-#                          -DZDAPP_CONFIG_PAN_ID=0x2002                       #
+#                          -DDEFAULT_CHANLIST=0x00001000                      #
+#                          -DZDAPP_CONFIG_PAN_ID=0x2004                       #
 #                          -DNWK_START_DELAY=100 -DEXTENDED_JOINING_RANDOM_MA #
 #                          SK=0x007F -DBEACON_REQUEST_DELAY=100               #
 #                          -DBEACON_REQ_DELAY_MASK=0x00FF                     #
@@ -284,10 +284,14 @@ C:\Texas Instruments\ZStack-CC2530-2.3.0-1.4.0\Components\hal\target\CC2530EB\ha
    \   000000                ; Saved register size: 0
    \   000000                ; Auto size: 0
     103            HAL_DMA_SET_ADDR_DESC0( &dmaCh0 );
+                   ^
+Warning[Pe069]: integer conversion resulted in truncation
    \   000000   74..         MOV     A,#(dmaCh0 >> 8) & 0xff
    \   000002   F5D5         MOV     0xd5,A
    \   000004   75D4..       MOV     0xd4,#dmaCh0 & 0xff
     104            HAL_DMA_SET_ADDR_DESC1234( dmaCh1234 );
+                   ^
+Warning[Pe069]: integer conversion resulted in truncation
    \   000007   74..         MOV     A,#(dmaCh1234 >> 8) & 0xff
    \   000009   F5D3         MOV     0xd3,A
    \   00000B   75D2..       MOV     0xd2,#dmaCh1234 & 0xff
@@ -425,4 +429,4 @@ C:\Texas Instruments\ZStack-CC2530-2.3.0-1.4.0\Components\hal\target\CC2530EB\ha
  40 bytes of XDATA memory
 
 Errors: none
-Warnings: none
+Warnings: 2

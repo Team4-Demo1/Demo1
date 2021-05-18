@@ -1,6 +1,6 @@
 ###############################################################################
 #                                                                             #
-# IAR C/C++ Compiler V8.10.3.10338/W32 for 8051         18/May/2021  16:15:51 #
+# IAR C/C++ Compiler V8.10.3.10338/W32 for 8051         18/May/2021  16:15:09 #
 # Copyright 2004-2011 IAR Systems AB.                                         #
 #                                                                             #
 #    Core               =  plain                                              #
@@ -9,15 +9,15 @@
 #    Calling convention =  xdata reentrant                                    #
 #    Constant location  =  data_rom                                           #
 #    Dptr setup         =  1,16                                               #
-#    Source file        =  C:\Texas Instruments\ZStack-CC2530-2.3.0-1.4.0\Dem #
-#                          o1\Components\hal\common\hal_assert.c              #
+#    Source file        =  C:\Texas Instruments\ZStack-CC2530-2.3.0-1.4.0\Com #
+#                          ponents\hal\common\hal_assert.c                    #
 #    Command line       =  -f "C:\Texas Instruments\ZStack-CC2530-2.3.0-1.4.0 #
-#                          \Demo1\Projects\zstack\Samples\GenericApp\CC2530DB #
-#                          \..\..\..\Tools\CC2530DB\f8wEndev.cfg"             #
-#                          (-DCPU32MHZ -DROOT=__near_func -DBLINK_LEDS) -f    #
-#                          "C:\Texas Instruments\ZStack-CC2530-2.3.0-1.4.0\De #
-#                          mo1\Projects\zstack\Samples\GenericApp\CC2530DB\.. #
-#                          \..\..\Tools\CC2530DB\f8wConfig.cfg" (-DSECURE=0   #
+#                          \Projects\zstack\Samples\GenericApp\CC2530DB\..\.. #
+#                          \..\Tools\CC2530DB\f8wEndev.cfg" (-DCPU32MHZ       #
+#                          -DROOT=__near_func -DBLINK_LEDS) -f "C:\Texas      #
+#                          Instruments\ZStack-CC2530-2.3.0-1.4.0\Projects\zst #
+#                          ack\Samples\GenericApp\CC2530DB\..\..\..\Tools\CC2 #
+#                          530DB\f8wConfig.cfg" (-DSECURE=0                   #
 #                          -DZG_SECURE_DYNAMIC=0 -DREFLECTOR                  #
 #                          -DDEFAULT_CHANLIST=0x00001000                      #
 #                          -DZDAPP_CONFIG_PAN_ID=0x2004                       #
@@ -38,100 +38,98 @@
 #                          -DGENERIC=__generic -DRFD_RCVC_ALWAYS_ON=FALSE     #
 #                          -DPOLL_RATE=1000 -DQUEUED_POLL_RATE=100            #
 #                          -DRESPONSE_POLL_RATE=100) -DREJOIN_POLL_RATE=440   #
-#                          "C:\Texas Instruments\ZStack-CC2530-2.3.0-1.4.0\De #
-#                          mo1\Components\hal\common\hal_assert.c" -D         #
+#                          "C:\Texas Instruments\ZStack-CC2530-2.3.0-1.4.0\Co #
+#                          mponents\hal\common\hal_assert.c" -D               #
 #                          NWK_AUTO_POLL -D ZTOOL_P1 -D MT_TASK -D            #
 #                          MT_SYS_FUNC -D MT_ZDO_FUNC -D LCD_SUPPORTED=DEBUG  #
 #                          -D xPOWER_SAVING -lC "C:\Texas                     #
-#                          Instruments\ZStack-CC2530-2.3.0-1.4.0\Demo1\Projec #
-#                          ts\zstack\Samples\GenericApp\CC2530DB\EndDeviceEB\ #
-#                          List\" -lA "C:\Texas Instruments\ZStack-CC2530-2.3 #
-#                          .0-1.4.0\Demo1\Projects\zstack\Samples\GenericApp\ #
-#                          CC2530DB\EndDeviceEB\List\" --diag_suppress        #
-#                          Pe001,Pa010 -o "C:\Texas                           #
-#                          Instruments\ZStack-CC2530-2.3.0-1.4.0\Demo1\Projec #
-#                          ts\zstack\Samples\GenericApp\CC2530DB\EndDeviceEB\ #
-#                          Obj\" -e --debug --core=plain --dptr=16,1          #
+#                          Instruments\ZStack-CC2530-2.3.0-1.4.0\Projects\zst #
+#                          ack\Samples\GenericApp\CC2530DB\EndDeviceEB\List\" #
+#                           -lA "C:\Texas Instruments\ZStack-CC2530-2.3.0-1.4 #
+#                          .0\Projects\zstack\Samples\GenericApp\CC2530DB\End #
+#                          DeviceEB\List\" --diag_suppress Pe001,Pa010 -o     #
+#                          "C:\Texas Instruments\ZStack-CC2530-2.3.0-1.4.0\Pr #
+#                          ojects\zstack\Samples\GenericApp\CC2530DB\EndDevic #
+#                          eEB\Obj\" -e --debug --core=plain --dptr=16,1      #
 #                          --data_model=large --code_model=banked             #
 #                          --calling_convention=xdata_reentrant               #
 #                          --place_constants=data_rom --nr_virtual_regs 16    #
 #                          -I "C:\Texas Instruments\ZStack-CC2530-2.3.0-1.4.0 #
-#                          \Demo1\Projects\zstack\Samples\GenericApp\CC2530DB #
-#                          \" -I "C:\Texas Instruments\ZStack-CC2530-2.3.0-1. #
-#                          4.0\Demo1\Projects\zstack\Samples\GenericApp\CC253 #
-#                          0DB\..\SOURCE\" -I "C:\Texas                       #
-#                          Instruments\ZStack-CC2530-2.3.0-1.4.0\Demo1\Projec #
-#                          ts\zstack\Samples\GenericApp\CC2530DB\..\..\..\ZMA #
-#                          IN\TI2530DB\" -I "C:\Texas                         #
-#                          Instruments\ZStack-CC2530-2.3.0-1.4.0\Demo1\Projec #
-#                          ts\zstack\Samples\GenericApp\CC2530DB\..\..\..\..\ #
-#                          ..\COMPONENTS\MT\" -I "C:\Texas                    #
-#                          Instruments\ZStack-CC2530-2.3.0-1.4.0\Demo1\Projec #
-#                          ts\zstack\Samples\GenericApp\CC2530DB\..\..\..\..\ #
-#                          ..\COMPONENTS\HAL\INCLUDE\" -I "C:\Texas           #
-#                          Instruments\ZStack-CC2530-2.3.0-1.4.0\Demo1\Projec #
-#                          ts\zstack\Samples\GenericApp\CC2530DB\..\..\..\..\ #
-#                          ..\COMPONENTS\HAL\TARGET\CC2530EB\" -I "C:\Texas   #
-#                          Instruments\ZStack-CC2530-2.3.0-1.4.0\Demo1\Projec #
-#                          ts\zstack\Samples\GenericApp\CC2530DB\..\..\..\..\ #
-#                          ..\COMPONENTS\OSAL\MCU\CCSOC\" -I "C:\Texas        #
-#                          Instruments\ZStack-CC2530-2.3.0-1.4.0\Demo1\Projec #
-#                          ts\zstack\Samples\GenericApp\CC2530DB\..\..\..\..\ #
-#                          ..\COMPONENTS\OSAL\INCLUDE\" -I "C:\Texas          #
-#                          Instruments\ZStack-CC2530-2.3.0-1.4.0\Demo1\Projec #
-#                          ts\zstack\Samples\GenericApp\CC2530DB\..\..\..\..\ #
-#                          ..\COMPONENTS\STACK\AF\" -I "C:\Texas              #
-#                          Instruments\ZStack-CC2530-2.3.0-1.4.0\Demo1\Projec #
-#                          ts\zstack\Samples\GenericApp\CC2530DB\..\..\..\..\ #
-#                          ..\COMPONENTS\STACK\NWK\" -I "C:\Texas             #
-#                          Instruments\ZStack-CC2530-2.3.0-1.4.0\Demo1\Projec #
-#                          ts\zstack\Samples\GenericApp\CC2530DB\..\..\..\..\ #
-#                          ..\COMPONENTS\STACK\SEC\" -I "C:\Texas             #
-#                          Instruments\ZStack-CC2530-2.3.0-1.4.0\Demo1\Projec #
-#                          ts\zstack\Samples\GenericApp\CC2530DB\..\..\..\..\ #
-#                          ..\COMPONENTS\STACK\SAPI\" -I "C:\Texas            #
-#                          Instruments\ZStack-CC2530-2.3.0-1.4.0\Demo1\Projec #
-#                          ts\zstack\Samples\GenericApp\CC2530DB\..\..\..\..\ #
-#                          ..\COMPONENTS\STACK\SYS\" -I "C:\Texas             #
-#                          Instruments\ZStack-CC2530-2.3.0-1.4.0\Demo1\Projec #
-#                          ts\zstack\Samples\GenericApp\CC2530DB\..\..\..\..\ #
-#                          ..\COMPONENTS\STACK\ZDO\" -I "C:\Texas             #
-#                          Instruments\ZStack-CC2530-2.3.0-1.4.0\Demo1\Projec #
-#                          ts\zstack\Samples\GenericApp\CC2530DB\..\..\..\..\ #
-#                          ..\COMPONENTS\ZMAC\F8W\" -I "C:\Texas              #
-#                          Instruments\ZStack-CC2530-2.3.0-1.4.0\Demo1\Projec #
-#                          ts\zstack\Samples\GenericApp\CC2530DB\..\..\..\..\ #
-#                          ..\COMPONENTS\ZMAC\" -I "C:\Texas                  #
-#                          Instruments\ZStack-CC2530-2.3.0-1.4.0\Demo1\Projec #
-#                          ts\zstack\Samples\GenericApp\CC2530DB\..\..\..\..\ #
-#                          ..\COMPONENTS\SERVICES\SADDR\" -I "C:\Texas        #
-#                          Instruments\ZStack-CC2530-2.3.0-1.4.0\Demo1\Projec #
-#                          ts\zstack\Samples\GenericApp\CC2530DB\..\..\..\..\ #
-#                          ..\COMPONENTS\SERVICES\SDATA\" -I "C:\Texas        #
-#                          Instruments\ZStack-CC2530-2.3.0-1.4.0\Demo1\Projec #
-#                          ts\zstack\Samples\GenericApp\CC2530DB\..\..\..\..\ #
-#                          ..\COMPONENTS\MAC\INCLUDE\" -I "C:\Texas           #
-#                          Instruments\ZStack-CC2530-2.3.0-1.4.0\Demo1\Projec #
-#                          ts\zstack\Samples\GenericApp\CC2530DB\..\..\..\..\ #
-#                          ..\COMPONENTS\MAC\HIGH_LEVEL\" -I "C:\Texas        #
-#                          Instruments\ZStack-CC2530-2.3.0-1.4.0\Demo1\Projec #
-#                          ts\zstack\Samples\GenericApp\CC2530DB\..\..\..\..\ #
-#                          ..\COMPONENTS\MAC\LOW_LEVEL\srf04\" -I "C:\Texas   #
-#                          Instruments\ZStack-CC2530-2.3.0-1.4.0\Demo1\Projec #
-#                          ts\zstack\Samples\GenericApp\CC2530DB\..\..\..\..\ #
-#                          ..\COMPONENTS\MAC\LOW_LEVEL\srf04\SINGLE_CHIP\"    #
-#                          -Ohz --require_prototypes                          #
-#    List file          =  C:\Texas Instruments\ZStack-CC2530-2.3.0-1.4.0\Dem #
-#                          o1\Projects\zstack\Samples\GenericApp\CC2530DB\End #
-#                          DeviceEB\List\hal_assert.lst                       #
-#    Object file        =  C:\Texas Instruments\ZStack-CC2530-2.3.0-1.4.0\Dem #
-#                          o1\Projects\zstack\Samples\GenericApp\CC2530DB\End #
-#                          DeviceEB\Obj\hal_assert.r51                        #
+#                          \Projects\zstack\Samples\GenericApp\CC2530DB\" -I  #
+#                          "C:\Texas Instruments\ZStack-CC2530-2.3.0-1.4.0\Pr #
+#                          ojects\zstack\Samples\GenericApp\CC2530DB\..\SOURC #
+#                          E\" -I "C:\Texas Instruments\ZStack-CC2530-2.3.0-1 #
+#                          .4.0\Projects\zstack\Samples\GenericApp\CC2530DB\. #
+#                          .\..\..\ZMAIN\TI2530DB\" -I "C:\Texas              #
+#                          Instruments\ZStack-CC2530-2.3.0-1.4.0\Projects\zst #
+#                          ack\Samples\GenericApp\CC2530DB\..\..\..\..\..\COM #
+#                          PONENTS\MT\" -I "C:\Texas                          #
+#                          Instruments\ZStack-CC2530-2.3.0-1.4.0\Projects\zst #
+#                          ack\Samples\GenericApp\CC2530DB\..\..\..\..\..\COM #
+#                          PONENTS\HAL\INCLUDE\" -I "C:\Texas                 #
+#                          Instruments\ZStack-CC2530-2.3.0-1.4.0\Projects\zst #
+#                          ack\Samples\GenericApp\CC2530DB\..\..\..\..\..\COM #
+#                          PONENTS\HAL\TARGET\CC2530EB\" -I "C:\Texas         #
+#                          Instruments\ZStack-CC2530-2.3.0-1.4.0\Projects\zst #
+#                          ack\Samples\GenericApp\CC2530DB\..\..\..\..\..\COM #
+#                          PONENTS\OSAL\MCU\CCSOC\" -I "C:\Texas              #
+#                          Instruments\ZStack-CC2530-2.3.0-1.4.0\Projects\zst #
+#                          ack\Samples\GenericApp\CC2530DB\..\..\..\..\..\COM #
+#                          PONENTS\OSAL\INCLUDE\" -I "C:\Texas                #
+#                          Instruments\ZStack-CC2530-2.3.0-1.4.0\Projects\zst #
+#                          ack\Samples\GenericApp\CC2530DB\..\..\..\..\..\COM #
+#                          PONENTS\STACK\AF\" -I "C:\Texas                    #
+#                          Instruments\ZStack-CC2530-2.3.0-1.4.0\Projects\zst #
+#                          ack\Samples\GenericApp\CC2530DB\..\..\..\..\..\COM #
+#                          PONENTS\STACK\NWK\" -I "C:\Texas                   #
+#                          Instruments\ZStack-CC2530-2.3.0-1.4.0\Projects\zst #
+#                          ack\Samples\GenericApp\CC2530DB\..\..\..\..\..\COM #
+#                          PONENTS\STACK\SEC\" -I "C:\Texas                   #
+#                          Instruments\ZStack-CC2530-2.3.0-1.4.0\Projects\zst #
+#                          ack\Samples\GenericApp\CC2530DB\..\..\..\..\..\COM #
+#                          PONENTS\STACK\SAPI\" -I "C:\Texas                  #
+#                          Instruments\ZStack-CC2530-2.3.0-1.4.0\Projects\zst #
+#                          ack\Samples\GenericApp\CC2530DB\..\..\..\..\..\COM #
+#                          PONENTS\STACK\SYS\" -I "C:\Texas                   #
+#                          Instruments\ZStack-CC2530-2.3.0-1.4.0\Projects\zst #
+#                          ack\Samples\GenericApp\CC2530DB\..\..\..\..\..\COM #
+#                          PONENTS\STACK\ZDO\" -I "C:\Texas                   #
+#                          Instruments\ZStack-CC2530-2.3.0-1.4.0\Projects\zst #
+#                          ack\Samples\GenericApp\CC2530DB\..\..\..\..\..\COM #
+#                          PONENTS\ZMAC\F8W\" -I "C:\Texas                    #
+#                          Instruments\ZStack-CC2530-2.3.0-1.4.0\Projects\zst #
+#                          ack\Samples\GenericApp\CC2530DB\..\..\..\..\..\COM #
+#                          PONENTS\ZMAC\" -I "C:\Texas                        #
+#                          Instruments\ZStack-CC2530-2.3.0-1.4.0\Projects\zst #
+#                          ack\Samples\GenericApp\CC2530DB\..\..\..\..\..\COM #
+#                          PONENTS\SERVICES\SADDR\" -I "C:\Texas              #
+#                          Instruments\ZStack-CC2530-2.3.0-1.4.0\Projects\zst #
+#                          ack\Samples\GenericApp\CC2530DB\..\..\..\..\..\COM #
+#                          PONENTS\SERVICES\SDATA\" -I "C:\Texas              #
+#                          Instruments\ZStack-CC2530-2.3.0-1.4.0\Projects\zst #
+#                          ack\Samples\GenericApp\CC2530DB\..\..\..\..\..\COM #
+#                          PONENTS\MAC\INCLUDE\" -I "C:\Texas                 #
+#                          Instruments\ZStack-CC2530-2.3.0-1.4.0\Projects\zst #
+#                          ack\Samples\GenericApp\CC2530DB\..\..\..\..\..\COM #
+#                          PONENTS\MAC\HIGH_LEVEL\" -I "C:\Texas              #
+#                          Instruments\ZStack-CC2530-2.3.0-1.4.0\Projects\zst #
+#                          ack\Samples\GenericApp\CC2530DB\..\..\..\..\..\COM #
+#                          PONENTS\MAC\LOW_LEVEL\srf04\" -I "C:\Texas         #
+#                          Instruments\ZStack-CC2530-2.3.0-1.4.0\Projects\zst #
+#                          ack\Samples\GenericApp\CC2530DB\..\..\..\..\..\COM #
+#                          PONENTS\MAC\LOW_LEVEL\srf04\SINGLE_CHIP\" -Ohz     #
+#                          --require_prototypes                               #
+#    List file          =  C:\Texas Instruments\ZStack-CC2530-2.3.0-1.4.0\Pro #
+#                          jects\zstack\Samples\GenericApp\CC2530DB\EndDevice #
+#                          EB\List\hal_assert.lst                             #
+#    Object file        =  C:\Texas Instruments\ZStack-CC2530-2.3.0-1.4.0\Pro #
+#                          jects\zstack\Samples\GenericApp\CC2530DB\EndDevice #
+#                          EB\Obj\hal_assert.r51                              #
 #                                                                             #
 #                                                                             #
 ###############################################################################
 
-C:\Texas Instruments\ZStack-CC2530-2.3.0-1.4.0\Demo1\Components\hal\common\hal_assert.c
+C:\Texas Instruments\ZStack-CC2530-2.3.0-1.4.0\Components\hal\common\hal_assert.c
       1          /**************************************************************************************************
       2            Filename:       hal_assert.c
       3            Revised:        $Date: 2010-01-07 10:10:43 -0800 (Thu, 07 Jan 2010) $

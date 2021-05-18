@@ -1,6 +1,6 @@
 ###############################################################################
 #                                                                             #
-# IAR C/C++ Compiler V8.10.3.10338/W32 for 8051         18/May/2021  10:42:48 #
+# IAR C/C++ Compiler V8.10.3.10338/W32 for 8051         18/May/2021  15:37:02 #
 # Copyright 2004-2011 IAR Systems AB.                                         #
 #                                                                             #
 #    Core               =  plain                                              #
@@ -20,8 +20,8 @@
 #                          ojects\zstack\Samples\GenericApp\CC2530DB\..\..\.. #
 #                          \Tools\CC2530DB\f8wConfig.cfg" (-DSECURE=0         #
 #                          -DZG_SECURE_DYNAMIC=0 -DREFLECTOR                  #
-#                          -DDEFAULT_CHANLIST=0x00000800                      #
-#                          -DZDAPP_CONFIG_PAN_ID=0x2002                       #
+#                          -DDEFAULT_CHANLIST=0x00001000                      #
+#                          -DZDAPP_CONFIG_PAN_ID=0x2004                       #
 #                          -DNWK_START_DELAY=100 -DEXTENDED_JOINING_RANDOM_MA #
 #                          SK=0x007F -DBEACON_REQUEST_DELAY=100               #
 #                          -DBEACON_REQ_DELAY_MASK=0x00FF                     #
@@ -339,6 +339,11 @@ C:\Texas Instruments\ZStack-CC2530-2.3.0-1.4.0\Components\hal\target\CC2530EB\ha
    \   00004B   540F         ANL     A,#0xf
    \   00004D   4410         ORL     A,#0x10
    \   00004F   F0           MOVX    @DPTR,A
+
+    HAL_DMA_SET_DEST( ch, dmaCfg.rxBuf );
+    ^
+"C:\Texas Instruments\ZStack-CC2530-2.3.0-1.4.0\Components\hal\target\CC2530EB\_hal_uart_dma.c",378  Warning[Pe069]: 
+          integer conversion resulted in truncation
    \   000050   74..         MOV     A,#(dmaCfg >> 8) & 0xff
    \   000052   90....       MOV     DPTR,#dmaCh1234 + 18
    \   000055   F0           MOVX    @DPTR,A
@@ -1774,4 +1779,4 @@ C:\Texas Instruments\ZStack-CC2530-2.3.0-1.4.0\Components\hal\target\CC2530EB\ha
    526 bytes of XDATA memory
 
 Errors: none
-Warnings: none
+Warnings: 1

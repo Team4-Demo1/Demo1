@@ -6370,17 +6370,19 @@
   <group>
     <name>App</name>
     <file>
-      <name>$PROJ_DIR$\Coordinator.c</name>
+      <name>$PROJ_DIR$\..\Source\Coordinator.c</name>
       <excluded>
-        <configuration>CoordinatorEB</configuration>
         <configuration>EndDeviceEB</configuration>
       </excluded>
     </file>
     <file>
-      <name>$PROJ_DIR$\Coordinator.h</name>
+      <name>$PROJ_DIR$\..\Source\Coordinator.h</name>
     </file>
     <file>
-      <name>$PROJ_DIR$\Enddevice.c</name>
+      <name>$PROJ_DIR$\..\Source\Enddevice.c</name>
+      <excluded>
+        <configuration>CoordinatorEB</configuration>
+      </excluded>
     </file>
     <file>
       <name>$PROJ_DIR$\..\Source\OSAL_GenericApp.c</name>
@@ -6603,7 +6605,7 @@
           <name>$PROJ_DIR$\..\..\..\..\..\Components\mac\low_level\srf04\single_chip\mac_radio_defs.c</name>
         </file>
         <file>
-          <name>$PROJ_DIR$\..\..\..\..\..\COMPONENTS\mac\LOW_LEVEL\srf04\SINGLE_CHIP\mac_radio_defs.h</name>
+          <name>$PROJ_DIR$\..\..\..\..\..\Components\mac\low_level\srf04\single_chip\mac_radio_defs.h</name>
         </file>
         <file>
           <name>$PROJ_DIR$\..\..\..\..\..\Components\mac\low_level\srf04\single_chip\mac_rffrontend.c</name>
@@ -6662,7 +6664,7 @@
       <name>$PROJ_DIR$\..\..\..\..\..\Components\mt\MT_SYS.c</name>
     </file>
     <file>
-      <name>$PROJ_DIR$\..\..\..\..\..\COMPONENTS\mt\MT_SYS.h</name>
+      <name>$PROJ_DIR$\..\..\..\..\..\Components\mt\MT_SYS.h</name>
     </file>
     <file>
       <name>$PROJ_DIR$\..\..\..\..\..\Components\mt\MT_TASK.c</name>
@@ -6674,7 +6676,7 @@
       <name>$PROJ_DIR$\..\..\..\..\..\Components\mt\MT_UART.c</name>
     </file>
     <file>
-      <name>$PROJ_DIR$\..\..\..\..\..\Components\mt\MT_UART.h</name>
+      <name>$PROJ_DIR$\..\..\..\..\..\COMPONENTS\mt\MT_UART.h</name>
     </file>
     <file>
       <name>$PROJ_DIR$\..\..\..\..\..\Components\mt\MT_UTIL.c</name>
@@ -6692,7 +6694,7 @@
       <name>$PROJ_DIR$\..\..\..\..\..\Components\mt\MT_ZDO.c</name>
     </file>
     <file>
-      <name>$PROJ_DIR$\..\..\..\..\..\COMPONENTS\mt\MT_ZDO.h</name>
+      <name>$PROJ_DIR$\..\..\..\..\..\Components\mt\MT_ZDO.h</name>
     </file>
   </group>
   <group>
