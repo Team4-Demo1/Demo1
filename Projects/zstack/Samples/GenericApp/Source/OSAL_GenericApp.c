@@ -62,7 +62,6 @@
   #include "aps_frag.h"
 #endif
 
-//#include "GenericApp.h"
 #include "Coordinator.h"
 
 /*********************************************************************

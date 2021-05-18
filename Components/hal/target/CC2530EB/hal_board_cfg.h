@@ -136,7 +136,7 @@
  * ------------------------------------------------------------------------------------------------
  */
 
-#define ACTIVE_LOW       !
+#define ACTIVE_LOW        !
 #define ACTIVE_HIGH       !!    /* double negation forces result to be '1' */
 
 /* S1 */

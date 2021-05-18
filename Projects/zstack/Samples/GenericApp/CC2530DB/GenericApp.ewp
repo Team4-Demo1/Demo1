@@ -6370,19 +6370,17 @@
   <group>
     <name>App</name>
     <file>
-      <name>$PROJ_DIR$\..\Source\Coordinator.c</name>
+      <name>$PROJ_DIR$\Coordinator.c</name>
       <excluded>
+        <configuration>CoordinatorEB</configuration>
         <configuration>EndDeviceEB</configuration>
       </excluded>
     </file>
     <file>
-      <name>$PROJ_DIR$\..\Source\Coordinator.h</name>
+      <name>$PROJ_DIR$\Coordinator.h</name>
     </file>
     <file>
-      <name>$PROJ_DIR$\..\Source\Enddevice.c</name>
-      <excluded>
-        <configuration>CoordinatorEB</configuration>
-      </excluded>
+      <name>$PROJ_DIR$\Enddevice.c</name>
     </file>
     <file>
       <name>$PROJ_DIR$\..\Source\OSAL_GenericApp.c</name>
@@ -6496,7 +6494,7 @@
             <name>$PROJ_DIR$\..\..\..\..\..\COMPONENTS\hal\target\CC2530EB\hal_mcu.h</name>
           </file>
           <file>
-            <name>$PROJ_DIR$\..\..\..\..\..\Components\hal\target\CC2530EB\hal_types.h</name>
+            <name>$PROJ_DIR$\..\..\..\..\..\COMPONENTS\hal\target\CC2530EB\hal_types.h</name>
           </file>
         </group>
       </group>
@@ -6883,7 +6881,7 @@
       <name>$PROJ_DIR$\..\..\..\..\..\Components\stack\zdo\ZDNwkMgr.c</name>
     </file>
     <file>
-      <name>$PROJ_DIR$\..\..\..\..\..\Components\stack\zdo\ZDNwkMgr.h</name>
+      <name>$PROJ_DIR$\..\..\..\..\..\COMPONENTS\stack\zdo\ZDNwkMgr.h</name>
     </file>
     <file>
       <name>$PROJ_DIR$\..\..\..\..\..\Components\stack\zdo\ZDObject.c</name>
