@@ -1,15 +1,3 @@
-/*>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
-* 文件名  ： Coordinator
-* 作者    ： Liuyibing
-* 版本    ： V0.0.1
-* 时间    ： 2021/5/18 星期二
-* 描述    ： 协调器接受数据并向云端发送数据
-********************************************************************
-* 副本
-*
-*>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>*/
-/* 头文件 ----------------------------------------------------------------*/
-#include "Coordinator.h"     
 #include  "OSAL.h"
 #include  "AF.h"
 #include  "ZDAPP.h"
@@ -21,13 +9,12 @@
 #if !defined(WIN32)
 #include "OnBoard.h"
 #endif
+
 #include "hal_lcd.h"
 #include "hal_led.h"
 #include "hal_key.h"
 #include "hal_uart.h"
 
-/* 宏定义 ----------------------------------------------------------------*/
-/* 结构体或枚举 ----------------------------------------------------------*/
 const cId_t GenericApp_ClusterList[GENERICAPP_MAX_CLUSTERS] =
 {
     GENERICAPP_CLUSTERID
@@ -48,25 +35,15 @@ const SimpleDescriptionFormat_t GenericApp_SimpleDesc =
 endPointDesc_t GenericApp_epDesc;
 byte GenericApp_TaskID;
 byte GenericApp_TransID;
-//unsigned char uartbuf[128];
 
-/* 内部函数声明-----------------------------------------------------------*/
+
 void GenericApp_MessageMSGCB(afIncomingMSGPacket_t *pckt );
 void GenericApp_SendTheMessage(void);
-//static void rxCB (uint8 port,uint8 event);
 
-/* 函数 ------------------------------------------------------------------*/
-/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-* 函数名  ： GenericApp_Init 
-* 参数    ： byte task_id
-* 返回    ： void
-* 作者    ： Liuyibing
-* 时间    ： 2021/5/18 星期二
-* 描述    ： 定义id
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+
 void GenericApp_Init(byte task_id)
 {
-    //    halUARTCfg_t uartConfig;
+    
     GenericApp_TaskID              =task_id;
     GenericApp_TransID             = 0;
     GenericApp_epDesc.endPoint     =GENERICAPP_ENDPOINT;
@@ -75,20 +52,8 @@ void GenericApp_Init(byte task_id)
     GenericApp_epDesc.latencyReq   =noLatencyReqs;
     afRegister( &GenericApp_epDesc);
     
-    /*    uartConfig.configured   =   TRUE;
-    uartConfig.baudRate   =   HAL_UART_BR_115200;
-    uartConfig.flowControl    =   FALSE;
-    uartConfig.callBackFunc   =   rxCB;
-    HalUARTOpen (0, &uartConfig);*/
 }
-/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-* 函数名  ： GenericApp_ProcessEvent
-* 参数    ：  byte task_id, UINT16 events
-* 返回    ： UINT16
-* 作者    ： Liuyibing
-* 时间    ： 2021/5/18 星期二
-* 描述    ： 函数说明
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+
 UINT16 GenericApp_ProcessEvent( byte task_id, UINT16 events )
 {
     afIncomingMSGPacket_t *MSGpkt;

@@ -1,9 +1,8 @@
 /*>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
-
 * 文件名  ：Enbddevice
-* 作者    ：Liuyibing
+* 作者    ：chenjialing
 * 版本    ：V0.0.1
-* 时间    ：2021/5/18
+* 时间    ：2021/5/17
 * 描述    ：文件说明
 ********************************************************************
 * 副本
@@ -34,6 +33,7 @@
 void  GenericApp_MessageMSGCB(afIncomingMSGPacket_t *pckt);
 void  GenericApp_SendTheMessage(void);
 /* 函数 ----------------------------------------------------------------*/
+
 const cId_t GenericApp_ClusterList[GENERICAPP_MAX_CLUSTERS ] = 
 {
     GENERICAPP_CLUSTERID
@@ -63,8 +63,8 @@ devStates_t GenericApp_NwkState;
 * 函数名  ：GenericApp_Init
 * 参数    ：byte task_id
 * 返回    ：void
-* 作者    ：Liuyibing
-* 时间    ：2021/5/18
+* 作者    ：chenjialing
+* 时间    ：2021/5/17
 * 描述    ：函数说明
 ----------------------------------------------------------------*/
 void GenericApp_Init( byte task_id )
@@ -85,8 +85,8 @@ void GenericApp_Init( byte task_id )
 * 函数名  ：GenericApp_ProcessEvent
 * 参数    ：byte task_id,UNIT16 evens
 * 返回    ：UINT16
-* 作者    ：Liuyibing
-* 时间    ：2021/5/18
+* 作者    ：chenjialing
+* 时间    ：2021/5/17
 * 描述    ：函数说明
 ----------------------------------------------------------------*/
 UINT16 GenericApp_ProcessEvent( byte task_id, UINT16 events )
@@ -124,8 +124,8 @@ UINT16 GenericApp_ProcessEvent( byte task_id, UINT16 events )
 * 函数名  ：GenericApp_SendTheMessage
 * 参数    ：void
 * 返回    ：void
-* 作者    ：Liuyibing
-* 时间    ：2021/5/18
+* 作者    ：chenjialing
+* 时间    ：2021/5/17
 * 描述    ：函数说明
 ----------------------------------------------------------------*/
 void  GenericApp_SendTheMessage(void)
@@ -143,7 +143,6 @@ void  GenericApp_SendTheMessage(void)
                    AF_DISCV_ROUTE, 
                    AF_DEFAULT_RADIUS);
     HalLedBlink (HAL_LED_2,0,50,500);
-    
     
 }
 

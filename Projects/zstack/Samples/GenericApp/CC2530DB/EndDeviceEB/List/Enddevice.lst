@@ -1,6 +1,6 @@
 ###############################################################################
 #                                                                             #
-# IAR C/C++ Compiler V8.10.3.10338/W32 for 8051         18/May/2021  16:15:22 #
+# IAR C/C++ Compiler V8.10.3.10338/W32 for 8051         18/May/2021  15:29:17 #
 # Copyright 2004-2011 IAR Systems AB.                                         #
 #                                                                             #
 #    Core               =  plain                                              #
@@ -9,12 +9,13 @@
 #    Calling convention =  xdata reentrant                                    #
 #    Constant location  =  data_rom                                           #
 #    Dptr setup         =  1,16                                               #
-#    Source file        =  C:\Texas Instruments\ZStack-CC2530-2.3.0-1.4.0\Pro #
-#                          jects\zstack\Samples\GenericApp\Source\Enddevice.c #
-#    Command line       =  -f "C:\Texas Instruments\ZStack-CC2530-2.3.0-1.4.0 #
+#    Source file        =  D:\Texas Instruments\ZStack-CC2530-2.3.0-1.4.0\Pro #
+#                          jects\zstack\Samples\GenericApp\CC2530DB\Enddevice #
+#                          .c                                                 #
+#    Command line       =  -f "D:\Texas Instruments\ZStack-CC2530-2.3.0-1.4.0 #
 #                          \Projects\zstack\Samples\GenericApp\CC2530DB\..\.. #
 #                          \..\Tools\CC2530DB\f8wEndev.cfg" (-DCPU32MHZ       #
-#                          -DROOT=__near_func -DBLINK_LEDS) -f "C:\Texas      #
+#                          -DROOT=__near_func -DBLINK_LEDS) -f "D:\Texas      #
 #                          Instruments\ZStack-CC2530-2.3.0-1.4.0\Projects\zst #
 #                          ack\Samples\GenericApp\CC2530DB\..\..\..\Tools\CC2 #
 #                          530DB\f8wConfig.cfg" (-DSECURE=0                   #
@@ -38,104 +39,104 @@
 #                          -DGENERIC=__generic -DRFD_RCVC_ALWAYS_ON=FALSE     #
 #                          -DPOLL_RATE=1000 -DQUEUED_POLL_RATE=100            #
 #                          -DRESPONSE_POLL_RATE=100) -DREJOIN_POLL_RATE=440   #
-#                          "C:\Texas Instruments\ZStack-CC2530-2.3.0-1.4.0\Pr #
-#                          ojects\zstack\Samples\GenericApp\Source\Enddevice. #
-#                          c" -D NWK_AUTO_POLL -D ZTOOL_P1 -D MT_TASK -D      #
+#                          "D:\Texas Instruments\ZStack-CC2530-2.3.0-1.4.0\Pr #
+#                          ojects\zstack\Samples\GenericApp\CC2530DB\Enddevic #
+#                          e.c" -D NWK_AUTO_POLL -D ZTOOL_P1 -D MT_TASK -D    #
 #                          MT_SYS_FUNC -D MT_ZDO_FUNC -D LCD_SUPPORTED=DEBUG  #
-#                          -D xPOWER_SAVING -lC "C:\Texas                     #
+#                          -D xPOWER_SAVING -D HAL_UART=TRUE -lC "D:\Texas    #
 #                          Instruments\ZStack-CC2530-2.3.0-1.4.0\Projects\zst #
 #                          ack\Samples\GenericApp\CC2530DB\EndDeviceEB\List\" #
-#                           -lA "C:\Texas Instruments\ZStack-CC2530-2.3.0-1.4 #
+#                           -lA "D:\Texas Instruments\ZStack-CC2530-2.3.0-1.4 #
 #                          .0\Projects\zstack\Samples\GenericApp\CC2530DB\End #
 #                          DeviceEB\List\" --diag_suppress Pe001,Pa010 -o     #
-#                          "C:\Texas Instruments\ZStack-CC2530-2.3.0-1.4.0\Pr #
+#                          "D:\Texas Instruments\ZStack-CC2530-2.3.0-1.4.0\Pr #
 #                          ojects\zstack\Samples\GenericApp\CC2530DB\EndDevic #
 #                          eEB\Obj\" -e --debug --core=plain --dptr=16,1      #
 #                          --data_model=large --code_model=banked             #
 #                          --calling_convention=xdata_reentrant               #
 #                          --place_constants=data_rom --nr_virtual_regs 16    #
-#                          -I "C:\Texas Instruments\ZStack-CC2530-2.3.0-1.4.0 #
+#                          -I "D:\Texas Instruments\ZStack-CC2530-2.3.0-1.4.0 #
 #                          \Projects\zstack\Samples\GenericApp\CC2530DB\" -I  #
-#                          "C:\Texas Instruments\ZStack-CC2530-2.3.0-1.4.0\Pr #
+#                          "D:\Texas Instruments\ZStack-CC2530-2.3.0-1.4.0\Pr #
 #                          ojects\zstack\Samples\GenericApp\CC2530DB\..\SOURC #
-#                          E\" -I "C:\Texas Instruments\ZStack-CC2530-2.3.0-1 #
+#                          E\" -I "D:\Texas Instruments\ZStack-CC2530-2.3.0-1 #
 #                          .4.0\Projects\zstack\Samples\GenericApp\CC2530DB\. #
-#                          .\..\..\ZMAIN\TI2530DB\" -I "C:\Texas              #
+#                          .\..\..\ZMAIN\TI2530DB\" -I "D:\Texas              #
 #                          Instruments\ZStack-CC2530-2.3.0-1.4.0\Projects\zst #
 #                          ack\Samples\GenericApp\CC2530DB\..\..\..\..\..\COM #
-#                          PONENTS\MT\" -I "C:\Texas                          #
+#                          PONENTS\MT\" -I "D:\Texas                          #
 #                          Instruments\ZStack-CC2530-2.3.0-1.4.0\Projects\zst #
 #                          ack\Samples\GenericApp\CC2530DB\..\..\..\..\..\COM #
-#                          PONENTS\HAL\INCLUDE\" -I "C:\Texas                 #
+#                          PONENTS\HAL\INCLUDE\" -I "D:\Texas                 #
 #                          Instruments\ZStack-CC2530-2.3.0-1.4.0\Projects\zst #
 #                          ack\Samples\GenericApp\CC2530DB\..\..\..\..\..\COM #
-#                          PONENTS\HAL\TARGET\CC2530EB\" -I "C:\Texas         #
+#                          PONENTS\HAL\TARGET\CC2530EB\" -I "D:\Texas         #
 #                          Instruments\ZStack-CC2530-2.3.0-1.4.0\Projects\zst #
 #                          ack\Samples\GenericApp\CC2530DB\..\..\..\..\..\COM #
-#                          PONENTS\OSAL\MCU\CCSOC\" -I "C:\Texas              #
+#                          PONENTS\OSAL\MCU\CCSOC\" -I "D:\Texas              #
 #                          Instruments\ZStack-CC2530-2.3.0-1.4.0\Projects\zst #
 #                          ack\Samples\GenericApp\CC2530DB\..\..\..\..\..\COM #
-#                          PONENTS\OSAL\INCLUDE\" -I "C:\Texas                #
+#                          PONENTS\OSAL\INCLUDE\" -I "D:\Texas                #
 #                          Instruments\ZStack-CC2530-2.3.0-1.4.0\Projects\zst #
 #                          ack\Samples\GenericApp\CC2530DB\..\..\..\..\..\COM #
-#                          PONENTS\STACK\AF\" -I "C:\Texas                    #
+#                          PONENTS\STACK\AF\" -I "D:\Texas                    #
 #                          Instruments\ZStack-CC2530-2.3.0-1.4.0\Projects\zst #
 #                          ack\Samples\GenericApp\CC2530DB\..\..\..\..\..\COM #
-#                          PONENTS\STACK\NWK\" -I "C:\Texas                   #
+#                          PONENTS\STACK\NWK\" -I "D:\Texas                   #
 #                          Instruments\ZStack-CC2530-2.3.0-1.4.0\Projects\zst #
 #                          ack\Samples\GenericApp\CC2530DB\..\..\..\..\..\COM #
-#                          PONENTS\STACK\SEC\" -I "C:\Texas                   #
+#                          PONENTS\STACK\SEC\" -I "D:\Texas                   #
 #                          Instruments\ZStack-CC2530-2.3.0-1.4.0\Projects\zst #
 #                          ack\Samples\GenericApp\CC2530DB\..\..\..\..\..\COM #
-#                          PONENTS\STACK\SAPI\" -I "C:\Texas                  #
+#                          PONENTS\STACK\SAPI\" -I "D:\Texas                  #
 #                          Instruments\ZStack-CC2530-2.3.0-1.4.0\Projects\zst #
 #                          ack\Samples\GenericApp\CC2530DB\..\..\..\..\..\COM #
-#                          PONENTS\STACK\SYS\" -I "C:\Texas                   #
+#                          PONENTS\STACK\SYS\" -I "D:\Texas                   #
 #                          Instruments\ZStack-CC2530-2.3.0-1.4.0\Projects\zst #
 #                          ack\Samples\GenericApp\CC2530DB\..\..\..\..\..\COM #
-#                          PONENTS\STACK\ZDO\" -I "C:\Texas                   #
+#                          PONENTS\STACK\ZDO\" -I "D:\Texas                   #
 #                          Instruments\ZStack-CC2530-2.3.0-1.4.0\Projects\zst #
 #                          ack\Samples\GenericApp\CC2530DB\..\..\..\..\..\COM #
-#                          PONENTS\ZMAC\F8W\" -I "C:\Texas                    #
+#                          PONENTS\ZMAC\F8W\" -I "D:\Texas                    #
 #                          Instruments\ZStack-CC2530-2.3.0-1.4.0\Projects\zst #
 #                          ack\Samples\GenericApp\CC2530DB\..\..\..\..\..\COM #
-#                          PONENTS\ZMAC\" -I "C:\Texas                        #
+#                          PONENTS\ZMAC\" -I "D:\Texas                        #
 #                          Instruments\ZStack-CC2530-2.3.0-1.4.0\Projects\zst #
 #                          ack\Samples\GenericApp\CC2530DB\..\..\..\..\..\COM #
-#                          PONENTS\SERVICES\SADDR\" -I "C:\Texas              #
+#                          PONENTS\SERVICES\SADDR\" -I "D:\Texas              #
 #                          Instruments\ZStack-CC2530-2.3.0-1.4.0\Projects\zst #
 #                          ack\Samples\GenericApp\CC2530DB\..\..\..\..\..\COM #
-#                          PONENTS\SERVICES\SDATA\" -I "C:\Texas              #
+#                          PONENTS\SERVICES\SDATA\" -I "D:\Texas              #
 #                          Instruments\ZStack-CC2530-2.3.0-1.4.0\Projects\zst #
 #                          ack\Samples\GenericApp\CC2530DB\..\..\..\..\..\COM #
-#                          PONENTS\MAC\INCLUDE\" -I "C:\Texas                 #
+#                          PONENTS\MAC\INCLUDE\" -I "D:\Texas                 #
 #                          Instruments\ZStack-CC2530-2.3.0-1.4.0\Projects\zst #
 #                          ack\Samples\GenericApp\CC2530DB\..\..\..\..\..\COM #
-#                          PONENTS\MAC\HIGH_LEVEL\" -I "C:\Texas              #
+#                          PONENTS\MAC\HIGH_LEVEL\" -I "D:\Texas              #
 #                          Instruments\ZStack-CC2530-2.3.0-1.4.0\Projects\zst #
 #                          ack\Samples\GenericApp\CC2530DB\..\..\..\..\..\COM #
-#                          PONENTS\MAC\LOW_LEVEL\srf04\" -I "C:\Texas         #
+#                          PONENTS\MAC\LOW_LEVEL\srf04\" -I "D:\Texas         #
 #                          Instruments\ZStack-CC2530-2.3.0-1.4.0\Projects\zst #
 #                          ack\Samples\GenericApp\CC2530DB\..\..\..\..\..\COM #
 #                          PONENTS\MAC\LOW_LEVEL\srf04\SINGLE_CHIP\" -Ohz     #
 #                          --require_prototypes                               #
-#    List file          =  C:\Texas Instruments\ZStack-CC2530-2.3.0-1.4.0\Pro #
+#    List file          =  D:\Texas Instruments\ZStack-CC2530-2.3.0-1.4.0\Pro #
 #                          jects\zstack\Samples\GenericApp\CC2530DB\EndDevice #
 #                          EB\List\Enddevice.lst                              #
-#    Object file        =  C:\Texas Instruments\ZStack-CC2530-2.3.0-1.4.0\Pro #
+#    Object file        =  D:\Texas Instruments\ZStack-CC2530-2.3.0-1.4.0\Pro #
 #                          jects\zstack\Samples\GenericApp\CC2530DB\EndDevice #
 #                          EB\Obj\Enddevice.r51                               #
 #                                                                             #
 #                                                                             #
 ###############################################################################
 
-C:\Texas Instruments\ZStack-CC2530-2.3.0-1.4.0\Projects\zstack\Samples\GenericApp\Source\Enddevice.c
+D:\Texas Instruments\ZStack-CC2530-2.3.0-1.4.0\Projects\zstack\Samples\GenericApp\CC2530DB\Enddevice.c
       1          /*>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
       2          
       3          * 文件名  ：Enbddevice
-      4          * 作者    ：Liuyibing
+      4          * 作者    ：chenjialing
       5          * 版本    ：V0.0.1
-      6          * 时间    ：2021/5/18
+      6          * 时间    ：2021/5/17
       7          * 描述    ：文件说明
       8          ********************************************************************
       9          * 副本
@@ -230,8 +231,8 @@ C:\Texas Instruments\ZStack-CC2530-2.3.0-1.4.0\Projects\zstack\Samples\GenericAp
      63          * 函数名  ：GenericApp_Init
      64          * 参数    ：byte task_id
      65          * 返回    ：void
-     66          * 作者    ：Liuyibing
-     67          * 时间    ：2021/5/18
+     66          * 作者    ：chenjialing
+     67          * 时间    ：2021/5/17
      68          * 描述    ：函数说明
      69          ----------------------------------------------------------------*/
 
@@ -267,7 +268,7 @@ C:\Texas Instruments\ZStack-CC2530-2.3.0-1.4.0\Projects\zstack\Samples\GenericAp
    \   000020   74..         MOV     A,#(GenericApp_TaskID >> 8) & 0xff
    \   000022   F0           MOVX    @DPTR,A
      77              GenericApp_epDesc.simpleDesc    =   
-     78                  (SimpleDescriptionFormat_t *)&GenericApp_SimpleDesc;
+     78                (SimpleDescriptionFormat_t *)&GenericApp_SimpleDesc;
    \   000023   A3           INC     DPTR
    \   000024   74..         MOV     A,#GenericApp_SimpleDesc & 0xff
    \   000026   F0           MOVX    @DPTR,A
@@ -292,8 +293,8 @@ C:\Texas Instruments\ZStack-CC2530-2.3.0-1.4.0\Projects\zstack\Samples\GenericAp
      85          * 函数名  ：GenericApp_ProcessEvent
      86          * 参数    ：byte task_id,UNIT16 evens
      87          * 返回    ：UINT16
-     88          * 作者    ：Liuyibing
-     89          * 时间    ：2021/5/18
+     88          * 作者    ：chenjialing
+     89          * 时间    ：2021/5/17
      90          * 描述    ：函数说明
      91          ----------------------------------------------------------------*/
 
@@ -307,46 +308,46 @@ C:\Texas Instruments\ZStack-CC2530-2.3.0-1.4.0\Projects\zstack\Samples\GenericAp
    \   000005                ; Auto size: 0
    \   000005   8A..         MOV     ?V0 + 0,R2
    \   000007   8B..         MOV     ?V0 + 1,R3
-     94              afIncomingMSGPacket_t *MSGpkt;
-     95              if ( events &SYS_EVENT_MSG )
+     94            afIncomingMSGPacket_t *MSGpkt;
+     95            if ( events &SYS_EVENT_MSG )
    \   000009   EB           MOV     A,R3
    \   00000A   5480         ANL     A,#0x80
    \   00000C   603C         JZ      ??GenericApp_ProcessEvent_0
-     96              {
-     97                  MSGpkt = (afIncomingMSGPacket_t *)osal_msg_receive
-     98                      (GenericApp_TaskID);
+     96            {
+     97               MSGpkt = (afIncomingMSGPacket_t *)osal_msg_receive
+     98                 (GenericApp_TaskID);
    \   00000E                ; Setup parameters for call to function osal_msg_receive
    \   00000E   801D         SJMP    ??GenericApp_ProcessEvent_1
-     99                  while ( MSGpkt )
-    100                  {
-    101                      switch ( MSGpkt->hdr.event )
+     99               while ( MSGpkt )
+    100               {
+    101                  switch ( MSGpkt->hdr.event )
    \                     ??GenericApp_ProcessEvent_2:
    \   000010   8E82         MOV     DPL,R6
    \   000012   8F83         MOV     DPH,R7
    \   000014   E0           MOVX    A,@DPTR
    \   000015   64D1         XRL     A,#0xd1
    \   000017   700D         JNZ     ??GenericApp_ProcessEvent_3
-    102                      {
-    103                      case ZDO_STATE_CHANGE:
-    104                          GenericApp_NwkState = (devStates_t)(MSGpkt->hdr.
-    105                                                              status);
+    102                  {
+    103                  case ZDO_STATE_CHANGE:
+    104                    GenericApp_NwkState = (devStates_t)(MSGpkt->hdr.
+    105                    status);
    \   000019   A3           INC     DPTR
    \   00001A   E0           MOVX    A,@DPTR
    \   00001B   90....       MOV     DPTR,#GenericApp_NwkState
    \   00001E   F0           MOVX    @DPTR,A
-    106                          if (GenericApp_NwkState ==DEV_END_DEVICE)
+    106                    if (GenericApp_NwkState ==DEV_END_DEVICE)
    \   00001F   6406         XRL     A,#0x6
    \   000021   7003         JNZ     ??GenericApp_ProcessEvent_3
-    107                          {
-    108                              GenericApp_SendTheMessage() ;
+    107                    {
+    108                      GenericApp_SendTheMessage() ;
    \   000023                ; Setup parameters for call to function GenericApp_SendTheMessage
    \   000023   12....       LCALL   ??GenericApp_SendTheMessage?relay
-    109                          }
-    110                          break;
-    111                      default:
-    112                          break;
-    113                      }
-    114                      osal_msg_deallocate( (uint8 *)MSGpkt );
+    109                    }
+    110                    break;
+    111                  default:
+    112                    break;
+    113                  }
+    114                  osal_msg_deallocate( (uint8 *)MSGpkt );
    \                     ??GenericApp_ProcessEvent_3:
    \   000026                ; Setup parameters for call to function osal_msg_deallocate
    \   000026   EE           MOV     A,R6
@@ -354,7 +355,7 @@ C:\Texas Instruments\ZStack-CC2530-2.3.0-1.4.0\Projects\zstack\Samples\GenericAp
    \   000028   EF           MOV     A,R7
    \   000029   FB           MOV     R3,A
    \   00002A   12....       LCALL   ??osal_msg_deallocate?relay
-    115                      MSGpkt = (afIncomingMSGPacket_t*)osal_msg_receive(GenericApp_TaskID );
+    115                  MSGpkt = (afIncomingMSGPacket_t*)osal_msg_receive(GenericApp_TaskID );
    \   00002D                ; Setup parameters for call to function osal_msg_receive
    \                     ??GenericApp_ProcessEvent_1:
    \   00002D   90....       MOV     DPTR,#GenericApp_TaskID
@@ -365,7 +366,7 @@ C:\Texas Instruments\ZStack-CC2530-2.3.0-1.4.0\Projects\zstack\Samples\GenericAp
    \   000037   8B..         MOV     ?V0 + 3,R3
    \   000039   AE..         MOV     R6,?V0 + 2
    \   00003B   AF..         MOV     R7,?V0 + 3
-    116                  }
+    116          }
    \   00003D   EE           MOV     A,R6
    \   00003E   4F           ORL     A,R7
    \   00003F   70CF         JNZ     ??GenericApp_ProcessEvent_2
@@ -375,23 +376,23 @@ C:\Texas Instruments\ZStack-CC2530-2.3.0-1.4.0\Projects\zstack\Samples\GenericAp
    \   000045   6480         XRL     A,#0x80
    \   000047   FB           MOV     R3,A
    \   000048   8004         SJMP    ??GenericApp_ProcessEvent_4
-    118              }
-    119              return 0;
+    118            }
+    119                   return 0;
    \                     ??GenericApp_ProcessEvent_0:
    \   00004A   7A00         MOV     R2,#0x0
    \   00004C   7B00         MOV     R3,#0x0
    \                     ??GenericApp_ProcessEvent_4:
    \   00004E   7F04         MOV     R7,#0x4
    \   000050   02....       LJMP    ?BANKED_LEAVE_XDATA
-    120          }
+    120               }
     121          
     122          /*>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
     123          
     124          * 函数名  ：GenericApp_SendTheMessage
     125          * 参数    ：void
     126          * 返回    ：void
-    127          * 作者    ：Liuyibing
-    128          * 时间    ：2021/5/18
+    127          * 作者    ：chenjialing
+    128          * 时间    ：2021/5/17
     129          * 描述    ：函数说明
     130          ----------------------------------------------------------------*/
 
@@ -405,7 +406,7 @@ C:\Texas Instruments\ZStack-CC2530-2.3.0-1.4.0\Projects\zstack\Samples\GenericAp
    \   000005                ; Auto size: 16
    \   000005   74F0         MOV     A,#-0x10
    \   000007   12....       LCALL   ?ALLOC_XSTACK8
-    133              unsigned char theMessageData[4] = "LED";
+    133            unsigned char theMessageData[4] = "LED";
    \   00000A   85..82       MOV     DPL,?XSP + 0
    \   00000D   85..83       MOV     DPH,?XSP + 1
    \   000010   AC82         MOV     R4,DPL
@@ -414,31 +415,31 @@ C:\Texas Instruments\ZStack-CC2530-2.3.0-1.4.0\Projects\zstack\Samples\GenericAp
    \   000017   7582..       MOV     DPL,#`?<Constant "LED">` & 0xff
    \   00001A   7404         MOV     A,#0x4
    \   00001C   12....       LCALL   ?MOVE_LONG8_XDATA_XDATA
-    134              afAddrType_t my_DstAddr;
-    135              my_DstAddr.addrMode = (afAddrMode_t)Addr16Bit;
+    134                    afAddrType_t my_DstAddr;
+    135                    my_DstAddr.addrMode = (afAddrMode_t)Addr16Bit;
    \   00001F   740C         MOV     A,#0xc
    \   000021   12....       LCALL   ?XSTACK_DISP0_8
    \   000024   7402         MOV     A,#0x2
    \   000026   F0           MOVX    @DPTR,A
-    136              my_DstAddr.endPoint = GENERICAPP_ENDPOINT;
+    136                    my_DstAddr.endPoint = GENERICAPP_ENDPOINT;
    \   000027   740D         MOV     A,#0xd
    \   000029   12....       LCALL   ?XSTACK_DISP0_8
    \   00002C   740A         MOV     A,#0xa
    \   00002E   F0           MOVX    @DPTR,A
-    137              my_DstAddr.addr.shortAddr = 0x0000;
+    137                    my_DstAddr.addr.shortAddr = 0x0000;
    \   00002F   7404         MOV     A,#0x4
    \   000031   12....       LCALL   ?XSTACK_DISP0_8
    \   000034   E4           CLR     A
    \   000035   F0           MOVX    @DPTR,A
    \   000036   A3           INC     DPTR
    \   000037   F0           MOVX    @DPTR,A
-    138              AF_DataRequest( &my_DstAddr,&GenericApp_epDesc,
-    139                             GENERICAPP_CLUSTERID,
-    140                             3,
-    141                             theMessageData,
-    142                             &GenericApp_TransID,
-    143                             AF_DISCV_ROUTE, 
-    144                             AF_DEFAULT_RADIUS);
+    138                    AF_DataRequest( &my_DstAddr,&GenericApp_epDesc,
+    139                                   GENERICAPP_CLUSTERID,
+    140                                    3,
+    141                                    theMessageData,
+    142                                    &GenericApp_TransID,
+    143                                    AF_DISCV_ROUTE, 
+    144                                    AF_DEFAULT_RADIUS);
    \   000038                ; Setup parameters for call to function AF_DataRequest
    \   000038   75..1E       MOV     ?V0 + 0,#0x1e
    \   00003B   78..         MOV     R0,#?V0 + 0
@@ -470,7 +471,7 @@ C:\Texas Instruments\ZStack-CC2530-2.3.0-1.4.0\Projects\zstack\Samples\GenericAp
    \   00007D   12....       LCALL   ??AF_DataRequest?relay
    \   000080   7409         MOV     A,#0x9
    \   000082   12....       LCALL   ?DEALLOC_XSTACK8
-    145              HalLedBlink (HAL_LED_2,0,50,500);
+    145                        HalLedBlink (HAL_LED_2,0,50,500);
    \   000085                ; Setup parameters for call to function HalLedBlink
    \   000085   7CF4         MOV     R4,#-0xc
    \   000087   7D01         MOV     R5,#0x1
@@ -478,8 +479,8 @@ C:\Texas Instruments\ZStack-CC2530-2.3.0-1.4.0\Projects\zstack\Samples\GenericAp
    \   00008B   7A00         MOV     R2,#0x0
    \   00008D   7902         MOV     R1,#0x2
    \   00008F   12....       LCALL   ??HalLedBlink?relay
-    146              
-    147              
+    146            
+    147            
     148          }
    \   000092   7410         MOV     A,#0x10
    \   000094   12....       LCALL   ?DEALLOC_XSTACK8
@@ -508,6 +509,7 @@ C:\Texas Instruments\ZStack-CC2530-2.3.0-1.4.0\Projects\zstack\Samples\GenericAp
     150          
     151          
     152          
+    153            
 
    Maximum stack usage in bytes:
 

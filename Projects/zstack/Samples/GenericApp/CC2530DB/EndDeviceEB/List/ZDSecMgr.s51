@@ -1,6 +1,6 @@
 ///////////////////////////////////////////////////////////////////////////////
 //                                                                            /
-// IAR C/C++ Compiler V8.10.3.10338/W32 for 8051        18/May/2021  16:15:10 /
+// IAR C/C++ Compiler V8.10.3.10338/W32 for 8051        18/May/2021  15:29:18 /
 // Copyright 2004-2011 IAR Systems AB.                                        /
 //                                                                            /
 //    Core               =  plain                                             /
@@ -9,12 +9,12 @@
 //    Calling convention =  xdata reentrant                                   /
 //    Constant location  =  data_rom                                          /
 //    Dptr setup         =  1,16                                              /
-//    Source file        =  C:\Texas Instruments\ZStack-CC2530-2.3.0-1.4.0\Co /
+//    Source file        =  D:\Texas Instruments\ZStack-CC2530-2.3.0-1.4.0\Co /
 //                          mponents\stack\zdo\ZDSecMgr.c                     /
-//    Command line       =  -f "C:\Texas Instruments\ZStack-CC2530-2.3.0-1.4. /
+//    Command line       =  -f "D:\Texas Instruments\ZStack-CC2530-2.3.0-1.4. /
 //                          0\Projects\zstack\Samples\GenericApp\CC2530DB\..\ /
 //                          ..\..\Tools\CC2530DB\f8wEndev.cfg" (-DCPU32MHZ    /
-//                          -DROOT=__near_func -DBLINK_LEDS) -f "C:\Texas     /
+//                          -DROOT=__near_func -DBLINK_LEDS) -f "D:\Texas     /
 //                          Instruments\ZStack-CC2530-2.3.0-1.4.0\Projects\zs /
 //                          tack\Samples\GenericApp\CC2530DB\..\..\..\Tools\C /
 //                          C2530DB\f8wConfig.cfg" (-DSECURE=0                /
@@ -38,90 +38,90 @@
 //                          "-DCONST=const __code" -DGENERIC=__generic        /
 //                          -DRFD_RCVC_ALWAYS_ON=FALSE -DPOLL_RATE=1000       /
 //                          -DQUEUED_POLL_RATE=100 -DRESPONSE_POLL_RATE=100)  /
-//                          -DREJOIN_POLL_RATE=440 "C:\Texas                  /
+//                          -DREJOIN_POLL_RATE=440 "D:\Texas                  /
 //                          Instruments\ZStack-CC2530-2.3.0-1.4.0\Components\ /
 //                          stack\zdo\ZDSecMgr.c" -D NWK_AUTO_POLL -D         /
 //                          ZTOOL_P1 -D MT_TASK -D MT_SYS_FUNC -D             /
 //                          MT_ZDO_FUNC -D LCD_SUPPORTED=DEBUG -D             /
-//                          xPOWER_SAVING -lC "C:\Texas                       /
+//                          xPOWER_SAVING -D HAL_UART=TRUE -lC "D:\Texas      /
 //                          Instruments\ZStack-CC2530-2.3.0-1.4.0\Projects\zs /
 //                          tack\Samples\GenericApp\CC2530DB\EndDeviceEB\List /
-//                          \" -lA "C:\Texas Instruments\ZStack-CC2530-2.3.0- /
+//                          \" -lA "D:\Texas Instruments\ZStack-CC2530-2.3.0- /
 //                          1.4.0\Projects\zstack\Samples\GenericApp\CC2530DB /
 //                          \EndDeviceEB\List\" --diag_suppress Pe001,Pa010   /
-//                          -o "C:\Texas Instruments\ZStack-CC2530-2.3.0-1.4. /
+//                          -o "D:\Texas Instruments\ZStack-CC2530-2.3.0-1.4. /
 //                          0\Projects\zstack\Samples\GenericApp\CC2530DB\End /
 //                          DeviceEB\Obj\" -e --debug --core=plain            /
 //                          --dptr=16,1 --data_model=large                    /
 //                          --code_model=banked --calling_convention=xdata_re /
 //                          entrant --place_constants=data_rom                /
-//                          --nr_virtual_regs 16 -I "C:\Texas                 /
+//                          --nr_virtual_regs 16 -I "D:\Texas                 /
 //                          Instruments\ZStack-CC2530-2.3.0-1.4.0\Projects\zs /
-//                          tack\Samples\GenericApp\CC2530DB\" -I "C:\Texas   /
+//                          tack\Samples\GenericApp\CC2530DB\" -I "D:\Texas   /
 //                          Instruments\ZStack-CC2530-2.3.0-1.4.0\Projects\zs /
 //                          tack\Samples\GenericApp\CC2530DB\..\SOURCE\" -I   /
-//                          "C:\Texas Instruments\ZStack-CC2530-2.3.0-1.4.0\P /
+//                          "D:\Texas Instruments\ZStack-CC2530-2.3.0-1.4.0\P /
 //                          rojects\zstack\Samples\GenericApp\CC2530DB\..\..\ /
-//                          ..\ZMAIN\TI2530DB\" -I "C:\Texas                  /
+//                          ..\ZMAIN\TI2530DB\" -I "D:\Texas                  /
 //                          Instruments\ZStack-CC2530-2.3.0-1.4.0\Projects\zs /
 //                          tack\Samples\GenericApp\CC2530DB\..\..\..\..\..\C /
-//                          OMPONENTS\MT\" -I "C:\Texas                       /
+//                          OMPONENTS\MT\" -I "D:\Texas                       /
 //                          Instruments\ZStack-CC2530-2.3.0-1.4.0\Projects\zs /
 //                          tack\Samples\GenericApp\CC2530DB\..\..\..\..\..\C /
-//                          OMPONENTS\HAL\INCLUDE\" -I "C:\Texas              /
+//                          OMPONENTS\HAL\INCLUDE\" -I "D:\Texas              /
 //                          Instruments\ZStack-CC2530-2.3.0-1.4.0\Projects\zs /
 //                          tack\Samples\GenericApp\CC2530DB\..\..\..\..\..\C /
-//                          OMPONENTS\HAL\TARGET\CC2530EB\" -I "C:\Texas      /
+//                          OMPONENTS\HAL\TARGET\CC2530EB\" -I "D:\Texas      /
 //                          Instruments\ZStack-CC2530-2.3.0-1.4.0\Projects\zs /
 //                          tack\Samples\GenericApp\CC2530DB\..\..\..\..\..\C /
-//                          OMPONENTS\OSAL\MCU\CCSOC\" -I "C:\Texas           /
+//                          OMPONENTS\OSAL\MCU\CCSOC\" -I "D:\Texas           /
 //                          Instruments\ZStack-CC2530-2.3.0-1.4.0\Projects\zs /
 //                          tack\Samples\GenericApp\CC2530DB\..\..\..\..\..\C /
-//                          OMPONENTS\OSAL\INCLUDE\" -I "C:\Texas             /
+//                          OMPONENTS\OSAL\INCLUDE\" -I "D:\Texas             /
 //                          Instruments\ZStack-CC2530-2.3.0-1.4.0\Projects\zs /
 //                          tack\Samples\GenericApp\CC2530DB\..\..\..\..\..\C /
-//                          OMPONENTS\STACK\AF\" -I "C:\Texas                 /
+//                          OMPONENTS\STACK\AF\" -I "D:\Texas                 /
 //                          Instruments\ZStack-CC2530-2.3.0-1.4.0\Projects\zs /
 //                          tack\Samples\GenericApp\CC2530DB\..\..\..\..\..\C /
-//                          OMPONENTS\STACK\NWK\" -I "C:\Texas                /
+//                          OMPONENTS\STACK\NWK\" -I "D:\Texas                /
 //                          Instruments\ZStack-CC2530-2.3.0-1.4.0\Projects\zs /
 //                          tack\Samples\GenericApp\CC2530DB\..\..\..\..\..\C /
-//                          OMPONENTS\STACK\SEC\" -I "C:\Texas                /
+//                          OMPONENTS\STACK\SEC\" -I "D:\Texas                /
 //                          Instruments\ZStack-CC2530-2.3.0-1.4.0\Projects\zs /
 //                          tack\Samples\GenericApp\CC2530DB\..\..\..\..\..\C /
-//                          OMPONENTS\STACK\SAPI\" -I "C:\Texas               /
+//                          OMPONENTS\STACK\SAPI\" -I "D:\Texas               /
 //                          Instruments\ZStack-CC2530-2.3.0-1.4.0\Projects\zs /
 //                          tack\Samples\GenericApp\CC2530DB\..\..\..\..\..\C /
-//                          OMPONENTS\STACK\SYS\" -I "C:\Texas                /
+//                          OMPONENTS\STACK\SYS\" -I "D:\Texas                /
 //                          Instruments\ZStack-CC2530-2.3.0-1.4.0\Projects\zs /
 //                          tack\Samples\GenericApp\CC2530DB\..\..\..\..\..\C /
-//                          OMPONENTS\STACK\ZDO\" -I "C:\Texas                /
+//                          OMPONENTS\STACK\ZDO\" -I "D:\Texas                /
 //                          Instruments\ZStack-CC2530-2.3.0-1.4.0\Projects\zs /
 //                          tack\Samples\GenericApp\CC2530DB\..\..\..\..\..\C /
-//                          OMPONENTS\ZMAC\F8W\" -I "C:\Texas                 /
+//                          OMPONENTS\ZMAC\F8W\" -I "D:\Texas                 /
 //                          Instruments\ZStack-CC2530-2.3.0-1.4.0\Projects\zs /
 //                          tack\Samples\GenericApp\CC2530DB\..\..\..\..\..\C /
-//                          OMPONENTS\ZMAC\" -I "C:\Texas                     /
+//                          OMPONENTS\ZMAC\" -I "D:\Texas                     /
 //                          Instruments\ZStack-CC2530-2.3.0-1.4.0\Projects\zs /
 //                          tack\Samples\GenericApp\CC2530DB\..\..\..\..\..\C /
-//                          OMPONENTS\SERVICES\SADDR\" -I "C:\Texas           /
+//                          OMPONENTS\SERVICES\SADDR\" -I "D:\Texas           /
 //                          Instruments\ZStack-CC2530-2.3.0-1.4.0\Projects\zs /
 //                          tack\Samples\GenericApp\CC2530DB\..\..\..\..\..\C /
-//                          OMPONENTS\SERVICES\SDATA\" -I "C:\Texas           /
+//                          OMPONENTS\SERVICES\SDATA\" -I "D:\Texas           /
 //                          Instruments\ZStack-CC2530-2.3.0-1.4.0\Projects\zs /
 //                          tack\Samples\GenericApp\CC2530DB\..\..\..\..\..\C /
-//                          OMPONENTS\MAC\INCLUDE\" -I "C:\Texas              /
+//                          OMPONENTS\MAC\INCLUDE\" -I "D:\Texas              /
 //                          Instruments\ZStack-CC2530-2.3.0-1.4.0\Projects\zs /
 //                          tack\Samples\GenericApp\CC2530DB\..\..\..\..\..\C /
-//                          OMPONENTS\MAC\HIGH_LEVEL\" -I "C:\Texas           /
+//                          OMPONENTS\MAC\HIGH_LEVEL\" -I "D:\Texas           /
 //                          Instruments\ZStack-CC2530-2.3.0-1.4.0\Projects\zs /
 //                          tack\Samples\GenericApp\CC2530DB\..\..\..\..\..\C /
-//                          OMPONENTS\MAC\LOW_LEVEL\srf04\" -I "C:\Texas      /
+//                          OMPONENTS\MAC\LOW_LEVEL\srf04\" -I "D:\Texas      /
 //                          Instruments\ZStack-CC2530-2.3.0-1.4.0\Projects\zs /
 //                          tack\Samples\GenericApp\CC2530DB\..\..\..\..\..\C /
 //                          OMPONENTS\MAC\LOW_LEVEL\srf04\SINGLE_CHIP\" -Ohz  /
 //                          --require_prototypes                              /
-//    List file          =  C:\Texas Instruments\ZStack-CC2530-2.3.0-1.4.0\Pr /
+//    List file          =  D:\Texas Instruments\ZStack-CC2530-2.3.0-1.4.0\Pr /
 //                          ojects\zstack\Samples\GenericApp\CC2530DB\EndDevi /
 //                          ceEB\List\ZDSecMgr.s51                            /
 //                                                                            /
@@ -1462,7 +1462,7 @@ ZDSecMgrUpdateDeviceInd SYMBOL "ZDSecMgrUpdateDeviceInd"
         EXTERN zgSecurePermitJoin
         EXTERN zgUseDefaultTCLK
 
-// C:\Texas Instruments\ZStack-CC2530-2.3.0-1.4.0\Components\stack\zdo\ZDSecMgr.c
+// D:\Texas Instruments\ZStack-CC2530-2.3.0-1.4.0\Components\stack\zdo\ZDSecMgr.c
 //    1 /**************************************************************************************************
 //    2   Filename:       ZDSecMgr.c
 //    3   Revised:        $Date: 2010-01-08 13:29:59 -0800 (Fri, 08 Jan 2010) $

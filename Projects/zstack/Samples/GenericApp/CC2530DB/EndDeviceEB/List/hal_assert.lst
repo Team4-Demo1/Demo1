@@ -1,6 +1,6 @@
 ###############################################################################
 #                                                                             #
-# IAR C/C++ Compiler V8.10.3.10338/W32 for 8051         18/May/2021  16:15:09 #
+# IAR C/C++ Compiler V8.10.3.10338/W32 for 8051         18/May/2021  15:29:19 #
 # Copyright 2004-2011 IAR Systems AB.                                         #
 #                                                                             #
 #    Core               =  plain                                              #
@@ -9,12 +9,12 @@
 #    Calling convention =  xdata reentrant                                    #
 #    Constant location  =  data_rom                                           #
 #    Dptr setup         =  1,16                                               #
-#    Source file        =  C:\Texas Instruments\ZStack-CC2530-2.3.0-1.4.0\Com #
+#    Source file        =  D:\Texas Instruments\ZStack-CC2530-2.3.0-1.4.0\Com #
 #                          ponents\hal\common\hal_assert.c                    #
-#    Command line       =  -f "C:\Texas Instruments\ZStack-CC2530-2.3.0-1.4.0 #
+#    Command line       =  -f "D:\Texas Instruments\ZStack-CC2530-2.3.0-1.4.0 #
 #                          \Projects\zstack\Samples\GenericApp\CC2530DB\..\.. #
 #                          \..\Tools\CC2530DB\f8wEndev.cfg" (-DCPU32MHZ       #
-#                          -DROOT=__near_func -DBLINK_LEDS) -f "C:\Texas      #
+#                          -DROOT=__near_func -DBLINK_LEDS) -f "D:\Texas      #
 #                          Instruments\ZStack-CC2530-2.3.0-1.4.0\Projects\zst #
 #                          ack\Samples\GenericApp\CC2530DB\..\..\..\Tools\CC2 #
 #                          530DB\f8wConfig.cfg" (-DSECURE=0                   #
@@ -38,98 +38,98 @@
 #                          -DGENERIC=__generic -DRFD_RCVC_ALWAYS_ON=FALSE     #
 #                          -DPOLL_RATE=1000 -DQUEUED_POLL_RATE=100            #
 #                          -DRESPONSE_POLL_RATE=100) -DREJOIN_POLL_RATE=440   #
-#                          "C:\Texas Instruments\ZStack-CC2530-2.3.0-1.4.0\Co #
+#                          "D:\Texas Instruments\ZStack-CC2530-2.3.0-1.4.0\Co #
 #                          mponents\hal\common\hal_assert.c" -D               #
 #                          NWK_AUTO_POLL -D ZTOOL_P1 -D MT_TASK -D            #
 #                          MT_SYS_FUNC -D MT_ZDO_FUNC -D LCD_SUPPORTED=DEBUG  #
-#                          -D xPOWER_SAVING -lC "C:\Texas                     #
+#                          -D xPOWER_SAVING -D HAL_UART=TRUE -lC "D:\Texas    #
 #                          Instruments\ZStack-CC2530-2.3.0-1.4.0\Projects\zst #
 #                          ack\Samples\GenericApp\CC2530DB\EndDeviceEB\List\" #
-#                           -lA "C:\Texas Instruments\ZStack-CC2530-2.3.0-1.4 #
+#                           -lA "D:\Texas Instruments\ZStack-CC2530-2.3.0-1.4 #
 #                          .0\Projects\zstack\Samples\GenericApp\CC2530DB\End #
 #                          DeviceEB\List\" --diag_suppress Pe001,Pa010 -o     #
-#                          "C:\Texas Instruments\ZStack-CC2530-2.3.0-1.4.0\Pr #
+#                          "D:\Texas Instruments\ZStack-CC2530-2.3.0-1.4.0\Pr #
 #                          ojects\zstack\Samples\GenericApp\CC2530DB\EndDevic #
 #                          eEB\Obj\" -e --debug --core=plain --dptr=16,1      #
 #                          --data_model=large --code_model=banked             #
 #                          --calling_convention=xdata_reentrant               #
 #                          --place_constants=data_rom --nr_virtual_regs 16    #
-#                          -I "C:\Texas Instruments\ZStack-CC2530-2.3.0-1.4.0 #
+#                          -I "D:\Texas Instruments\ZStack-CC2530-2.3.0-1.4.0 #
 #                          \Projects\zstack\Samples\GenericApp\CC2530DB\" -I  #
-#                          "C:\Texas Instruments\ZStack-CC2530-2.3.0-1.4.0\Pr #
+#                          "D:\Texas Instruments\ZStack-CC2530-2.3.0-1.4.0\Pr #
 #                          ojects\zstack\Samples\GenericApp\CC2530DB\..\SOURC #
-#                          E\" -I "C:\Texas Instruments\ZStack-CC2530-2.3.0-1 #
+#                          E\" -I "D:\Texas Instruments\ZStack-CC2530-2.3.0-1 #
 #                          .4.0\Projects\zstack\Samples\GenericApp\CC2530DB\. #
-#                          .\..\..\ZMAIN\TI2530DB\" -I "C:\Texas              #
+#                          .\..\..\ZMAIN\TI2530DB\" -I "D:\Texas              #
 #                          Instruments\ZStack-CC2530-2.3.0-1.4.0\Projects\zst #
 #                          ack\Samples\GenericApp\CC2530DB\..\..\..\..\..\COM #
-#                          PONENTS\MT\" -I "C:\Texas                          #
+#                          PONENTS\MT\" -I "D:\Texas                          #
 #                          Instruments\ZStack-CC2530-2.3.0-1.4.0\Projects\zst #
 #                          ack\Samples\GenericApp\CC2530DB\..\..\..\..\..\COM #
-#                          PONENTS\HAL\INCLUDE\" -I "C:\Texas                 #
+#                          PONENTS\HAL\INCLUDE\" -I "D:\Texas                 #
 #                          Instruments\ZStack-CC2530-2.3.0-1.4.0\Projects\zst #
 #                          ack\Samples\GenericApp\CC2530DB\..\..\..\..\..\COM #
-#                          PONENTS\HAL\TARGET\CC2530EB\" -I "C:\Texas         #
+#                          PONENTS\HAL\TARGET\CC2530EB\" -I "D:\Texas         #
 #                          Instruments\ZStack-CC2530-2.3.0-1.4.0\Projects\zst #
 #                          ack\Samples\GenericApp\CC2530DB\..\..\..\..\..\COM #
-#                          PONENTS\OSAL\MCU\CCSOC\" -I "C:\Texas              #
+#                          PONENTS\OSAL\MCU\CCSOC\" -I "D:\Texas              #
 #                          Instruments\ZStack-CC2530-2.3.0-1.4.0\Projects\zst #
 #                          ack\Samples\GenericApp\CC2530DB\..\..\..\..\..\COM #
-#                          PONENTS\OSAL\INCLUDE\" -I "C:\Texas                #
+#                          PONENTS\OSAL\INCLUDE\" -I "D:\Texas                #
 #                          Instruments\ZStack-CC2530-2.3.0-1.4.0\Projects\zst #
 #                          ack\Samples\GenericApp\CC2530DB\..\..\..\..\..\COM #
-#                          PONENTS\STACK\AF\" -I "C:\Texas                    #
+#                          PONENTS\STACK\AF\" -I "D:\Texas                    #
 #                          Instruments\ZStack-CC2530-2.3.0-1.4.0\Projects\zst #
 #                          ack\Samples\GenericApp\CC2530DB\..\..\..\..\..\COM #
-#                          PONENTS\STACK\NWK\" -I "C:\Texas                   #
+#                          PONENTS\STACK\NWK\" -I "D:\Texas                   #
 #                          Instruments\ZStack-CC2530-2.3.0-1.4.0\Projects\zst #
 #                          ack\Samples\GenericApp\CC2530DB\..\..\..\..\..\COM #
-#                          PONENTS\STACK\SEC\" -I "C:\Texas                   #
+#                          PONENTS\STACK\SEC\" -I "D:\Texas                   #
 #                          Instruments\ZStack-CC2530-2.3.0-1.4.0\Projects\zst #
 #                          ack\Samples\GenericApp\CC2530DB\..\..\..\..\..\COM #
-#                          PONENTS\STACK\SAPI\" -I "C:\Texas                  #
+#                          PONENTS\STACK\SAPI\" -I "D:\Texas                  #
 #                          Instruments\ZStack-CC2530-2.3.0-1.4.0\Projects\zst #
 #                          ack\Samples\GenericApp\CC2530DB\..\..\..\..\..\COM #
-#                          PONENTS\STACK\SYS\" -I "C:\Texas                   #
+#                          PONENTS\STACK\SYS\" -I "D:\Texas                   #
 #                          Instruments\ZStack-CC2530-2.3.0-1.4.0\Projects\zst #
 #                          ack\Samples\GenericApp\CC2530DB\..\..\..\..\..\COM #
-#                          PONENTS\STACK\ZDO\" -I "C:\Texas                   #
+#                          PONENTS\STACK\ZDO\" -I "D:\Texas                   #
 #                          Instruments\ZStack-CC2530-2.3.0-1.4.0\Projects\zst #
 #                          ack\Samples\GenericApp\CC2530DB\..\..\..\..\..\COM #
-#                          PONENTS\ZMAC\F8W\" -I "C:\Texas                    #
+#                          PONENTS\ZMAC\F8W\" -I "D:\Texas                    #
 #                          Instruments\ZStack-CC2530-2.3.0-1.4.0\Projects\zst #
 #                          ack\Samples\GenericApp\CC2530DB\..\..\..\..\..\COM #
-#                          PONENTS\ZMAC\" -I "C:\Texas                        #
+#                          PONENTS\ZMAC\" -I "D:\Texas                        #
 #                          Instruments\ZStack-CC2530-2.3.0-1.4.0\Projects\zst #
 #                          ack\Samples\GenericApp\CC2530DB\..\..\..\..\..\COM #
-#                          PONENTS\SERVICES\SADDR\" -I "C:\Texas              #
+#                          PONENTS\SERVICES\SADDR\" -I "D:\Texas              #
 #                          Instruments\ZStack-CC2530-2.3.0-1.4.0\Projects\zst #
 #                          ack\Samples\GenericApp\CC2530DB\..\..\..\..\..\COM #
-#                          PONENTS\SERVICES\SDATA\" -I "C:\Texas              #
+#                          PONENTS\SERVICES\SDATA\" -I "D:\Texas              #
 #                          Instruments\ZStack-CC2530-2.3.0-1.4.0\Projects\zst #
 #                          ack\Samples\GenericApp\CC2530DB\..\..\..\..\..\COM #
-#                          PONENTS\MAC\INCLUDE\" -I "C:\Texas                 #
+#                          PONENTS\MAC\INCLUDE\" -I "D:\Texas                 #
 #                          Instruments\ZStack-CC2530-2.3.0-1.4.0\Projects\zst #
 #                          ack\Samples\GenericApp\CC2530DB\..\..\..\..\..\COM #
-#                          PONENTS\MAC\HIGH_LEVEL\" -I "C:\Texas              #
+#                          PONENTS\MAC\HIGH_LEVEL\" -I "D:\Texas              #
 #                          Instruments\ZStack-CC2530-2.3.0-1.4.0\Projects\zst #
 #                          ack\Samples\GenericApp\CC2530DB\..\..\..\..\..\COM #
-#                          PONENTS\MAC\LOW_LEVEL\srf04\" -I "C:\Texas         #
+#                          PONENTS\MAC\LOW_LEVEL\srf04\" -I "D:\Texas         #
 #                          Instruments\ZStack-CC2530-2.3.0-1.4.0\Projects\zst #
 #                          ack\Samples\GenericApp\CC2530DB\..\..\..\..\..\COM #
 #                          PONENTS\MAC\LOW_LEVEL\srf04\SINGLE_CHIP\" -Ohz     #
 #                          --require_prototypes                               #
-#    List file          =  C:\Texas Instruments\ZStack-CC2530-2.3.0-1.4.0\Pro #
+#    List file          =  D:\Texas Instruments\ZStack-CC2530-2.3.0-1.4.0\Pro #
 #                          jects\zstack\Samples\GenericApp\CC2530DB\EndDevice #
 #                          EB\List\hal_assert.lst                             #
-#    Object file        =  C:\Texas Instruments\ZStack-CC2530-2.3.0-1.4.0\Pro #
+#    Object file        =  D:\Texas Instruments\ZStack-CC2530-2.3.0-1.4.0\Pro #
 #                          jects\zstack\Samples\GenericApp\CC2530DB\EndDevice #
 #                          EB\Obj\hal_assert.r51                              #
 #                                                                             #
 #                                                                             #
 ###############################################################################
 
-C:\Texas Instruments\ZStack-CC2530-2.3.0-1.4.0\Components\hal\common\hal_assert.c
+D:\Texas Instruments\ZStack-CC2530-2.3.0-1.4.0\Components\hal\common\hal_assert.c
       1          /**************************************************************************************************
       2            Filename:       hal_assert.c
       3            Revised:        $Date: 2010-01-07 10:10:43 -0800 (Thu, 07 Jan 2010) $
@@ -355,11 +355,11 @@ C:\Texas Instruments\ZStack-CC2530-2.3.0-1.4.0\Components\hal\common\hal_assert.
    \   000040   438F01       ORL     0x8f,#0x1
     126          
     127            HAL_TURN_OFF_LED1();
-   \   000043   D290         SETB    0x90.0
+   \   000043   C290         CLR     0x90.0
     128            HAL_TURN_OFF_LED2();
-   \   000045   D291         SETB    0x90.1
+   \   000045   C291         CLR     0x90.1
     129            HAL_TURN_OFF_LED3();
-   \   000047   D294         SETB    0x90.4
+   \   000047   C294         CLR     0x90.4
     130            HAL_TURN_OFF_LED4();
    \   000049   8017         SJMP    ??halAssertHazardLights_3
     131          
@@ -502,7 +502,7 @@ C:\Texas Instruments\ZStack-CC2530-2.3.0-1.4.0\Components\hal\common\hal_assert.
     268                  {
     269                    HAL_TURN_OFF_LED1();
    \                     ??halAssertHazardLights_4:
-   \   00004B   D290         SETB    0x90.0
+   \   00004B   C290         CLR     0x90.0
     270                  }
     271          
     272                  /* advance to next bit */
@@ -535,7 +535,7 @@ C:\Texas Instruments\ZStack-CC2530-2.3.0-1.4.0\Components\hal\common\hal_assert.
     286               */
     287              HAL_TURN_OFF_LED1();
    \                     ??halAssertHazardLights_3:
-   \   000062   D290         SETB    0x90.0
+   \   000062   C290         CLR     0x90.0
    \                     ??halAssertHazardLights_7:
    \   000064   7900         MOV     R1,#0x0
    \                     ??halAssertHazardLights_8:
@@ -603,10 +603,10 @@ C:\Texas Instruments\ZStack-CC2530-2.3.0-1.4.0\Components\hal\common\hal_assert.
    \   0000D9   740A         MOV     A,#0xa
    \   0000DB   69           XRL     A,R1
    \   0000DC   7088         JNZ     ??halAssertHazardLights_8
-   \   0000DE   D290         SETB    0x90.0
-   \   0000E0   D291         SETB    0x90.1
-   \   0000E2   D294         SETB    0x90.4
-   \   0000E4   D290         SETB    0x90.0
+   \   0000DE   C290         CLR     0x90.0
+   \   0000E0   C291         CLR     0x90.1
+   \   0000E2   C294         CLR     0x90.4
+   \   0000E4   C290         CLR     0x90.0
    \   0000E6   7800         MOV     R0,#0x0
    \   0000E8   7900         MOV     R1,#0x0
    \                     ??halAssertHazardLights_18:
@@ -651,15 +651,15 @@ C:\Texas Instruments\ZStack-CC2530-2.3.0-1.4.0\Components\hal\common\hal_assert.
    \                     ??halAssertHazardLights_6:
    \   000133   A281         MOV     C,0x80.1
    \   000135   50FC         JNC     ??halAssertHazardLights_6
-   \   000137   C290         CLR     0x90.0
-   \   000139   C291         CLR     0x90.1
-   \   00013B   C294         CLR     0x90.4
+   \   000137   D290         SETB    0x90.0
+   \   000139   D291         SETB    0x90.1
+   \   00013B   D294         SETB    0x90.4
    \   00013D   EB           MOV     A,R3
    \   00013E   7004         JNZ     ??halAssertHazardLights_20
-   \   000140   C290         CLR     0x90.0
+   \   000140   D290         SETB    0x90.0
    \   000142   8002         SJMP    ??halAssertHazardLights_21
    \                     ??halAssertHazardLights_20:
-   \   000144   D290         SETB    0x90.0
+   \   000144   C290         CLR     0x90.0
    \                     ??halAssertHazardLights_21:
    \   000146   7800         MOV     R0,#0x0
    \   000148   7900         MOV     R1,#0x0
@@ -672,10 +672,10 @@ C:\Texas Instruments\ZStack-CC2530-2.3.0-1.4.0\Components\hal\common\hal_assert.
    \   000152   12....       LCALL   ?Subroutine0 & 0xFFFF
    \                     ??CrossCallReturnLabel_1:
    \   000155   40F3         JC      ??halAssertHazardLights_22
-   \   000157   D290         SETB    0x90.0
-   \   000159   D291         SETB    0x90.1
-   \   00015B   D294         SETB    0x90.4
-   \   00015D   D290         SETB    0x90.0
+   \   000157   C290         CLR     0x90.0
+   \   000159   C291         CLR     0x90.1
+   \   00015B   C294         CLR     0x90.4
+   \   00015D   C290         CLR     0x90.0
    \   00015F   75..01       MOV     ?V0 + 0,#0x1
    \   000162   75..00       MOV     ?V0 + 1,#0x0
    \   000165   7407         MOV     A,#0x7
@@ -696,7 +696,7 @@ C:\Texas Instruments\ZStack-CC2530-2.3.0-1.4.0\Components\hal\common\hal_assert.
    \   000183   55..         ANL     A,?V0 + 0
    \   000185   7003         JNZ     $+5
    \   000187   02....       LJMP    ??halAssertHazardLights_4 & 0xFFFF
-   \   00018A   C290         CLR     0x90.0
+   \   00018A   D290         SETB    0x90.0
    \   00018C   02....       LJMP    ??halAssertHazardLights_5 & 0xFFFF
    \   00018F                REQUIRE _A_IEN0
    \   00018F                REQUIRE SLEEPCMD
