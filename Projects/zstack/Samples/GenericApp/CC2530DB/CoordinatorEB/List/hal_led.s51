@@ -1,6 +1,6 @@
 ///////////////////////////////////////////////////////////////////////////////
 //                                                                            /
-// IAR C/C++ Compiler V8.10.3.10338/W32 for 8051        19/May/2021  10:09:06 /
+// IAR C/C++ Compiler V8.10.3.10338/W32 for 8051        19/May/2021  10:41:45 /
 // Copyright 2004-2011 IAR Systems AB.                                        /
 //                                                                            /
 //    Core               =  plain                                             /
@@ -9,15 +9,17 @@
 //    Calling convention =  xdata reentrant                                   /
 //    Constant location  =  data_rom                                          /
 //    Dptr setup         =  1,16                                              /
-//    Source file        =  D:\桌面\Demo1\Components\hal\target\CC2530EB\hal_ /
-//                          led.c                                             /
-//    Command line       =  -f D:\桌面\Demo1\Projects\zstack\Samples\GenericA /
-//                          pp\CC2530DB\..\..\..\Tools\CC2530DB\f8wCoord.cfg  /
+//    Source file        =  C:\Texas Instruments\ZStack-CC2530-2.3.0-1.4.0\De /
+//                          mo1\Components\hal\target\CC2530EB\hal_led.c      /
+//    Command line       =  -f "C:\Texas Instruments\ZStack-CC2530-2.3.0-1.4. /
+//                          0\Demo1\Projects\zstack\Samples\GenericApp\CC2530 /
+//                          DB\..\..\..\Tools\CC2530DB\f8wCoord.cfg"          /
 //                          (-DCPU32MHZ -DROOT=__near_func                    /
 //                          -DMAC_CFG_APP_PENDING_QUEUE=TRUE                  /
 //                          -DZDO_COORDINATOR -DRTR_NWK -DBLINK_LEDS) -f      /
-//                          D:\桌面\Demo1\Projects\zstack\Samples\GenericApp\ /
-//                          CC2530DB\..\..\..\Tools\CC2530DB\f8wConfig.cfg    /
+//                          "C:\Texas Instruments\ZStack-CC2530-2.3.0-1.4.0\D /
+//                          emo1\Projects\zstack\Samples\GenericApp\CC2530DB\ /
+//                          ..\..\..\Tools\CC2530DB\f8wConfig.cfg"            /
 //                          (-DSECURE=0 -DZG_SECURE_DYNAMIC=0 -DREFLECTOR     /
 //                          -DDEFAULT_CHANLIST=0x00001000                     /
 //                          -DZDAPP_CONFIG_PAN_ID=0x2004                      /
@@ -38,68 +40,93 @@
 //                          "-DCONST=const __code" -DGENERIC=__generic        /
 //                          -DRFD_RCVC_ALWAYS_ON=FALSE -DPOLL_RATE=1000       /
 //                          -DQUEUED_POLL_RATE=100 -DRESPONSE_POLL_RATE=100)  /
-//                          -DREJOIN_POLL_RATE=440 D:\桌面\Demo1\Components\h /
-//                          al\target\CC2530EB\hal_led.c -D ZTOOL_P1 -D       /
-//                          MT_TASK -D MT_SYS_FUNC -D MT_ZDO_FUNC -D          /
-//                          LCD_SUPPORTED=DEBUG -lC                           /
-//                          D:\桌面\Demo1\Projects\zstack\Samples\GenericApp\ /
-//                          CC2530DB\CoordinatorEB\List\ -lA                  /
-//                          D:\桌面\Demo1\Projects\zstack\Samples\GenericApp\ /
-//                          CC2530DB\CoordinatorEB\List\ --diag_suppress      /
-//                          Pe001,Pa010 -o D:\桌面\Demo1\Projects\zstack\Samp /
-//                          les\GenericApp\CC2530DB\CoordinatorEB\Obj\ -e     /
-//                          --debug --core=plain --dptr=16,1                  /
-//                          --data_model=large --code_model=banked            /
-//                          --calling_convention=xdata_reentrant              /
-//                          --place_constants=data_rom --nr_virtual_regs 16   /
-//                          -I D:\桌面\Demo1\Projects\zstack\Samples\GenericA /
-//                          pp\CC2530DB\ -I D:\桌面\Demo1\Projects\zstack\Sam /
-//                          ples\GenericApp\CC2530DB\..\SOURCE\ -I            /
-//                          D:\桌面\Demo1\Projects\zstack\Samples\GenericApp\ /
-//                          CC2530DB\..\..\..\ZMAIN\TI2530DB\ -I              /
-//                          D:\桌面\Demo1\Projects\zstack\Samples\GenericApp\ /
-//                          CC2530DB\..\..\..\..\..\COMPONENTS\MT\ -I         /
-//                          D:\桌面\Demo1\Projects\zstack\Samples\GenericApp\ /
-//                          CC2530DB\..\..\..\..\..\COMPONENTS\HAL\INCLUDE\   /
-//                          -I D:\桌面\Demo1\Projects\zstack\Samples\GenericA /
-//                          pp\CC2530DB\..\..\..\..\..\COMPONENTS\HAL\TARGET\ /
-//                          CC2530EB\ -I D:\桌面\Demo1\Projects\zstack\Sample /
-//                          s\GenericApp\CC2530DB\..\..\..\..\..\COMPONENTS\O /
-//                          SAL\MCU\CCSOC\ -I D:\桌面\Demo1\Projects\zstack\S /
-//                          amples\GenericApp\CC2530DB\..\..\..\..\..\COMPONE /
-//                          NTS\OSAL\INCLUDE\ -I D:\桌面\Demo1\Projects\zstac /
-//                          k\Samples\GenericApp\CC2530DB\..\..\..\..\..\COMP /
-//                          ONENTS\STACK\AF\ -I D:\桌面\Demo1\Projects\zstack /
-//                          \Samples\GenericApp\CC2530DB\..\..\..\..\..\COMPO /
-//                          NENTS\STACK\NWK\ -I D:\桌面\Demo1\Projects\zstack /
-//                          \Samples\GenericApp\CC2530DB\..\..\..\..\..\COMPO /
-//                          NENTS\STACK\SEC\ -I D:\桌面\Demo1\Projects\zstack /
-//                          \Samples\GenericApp\CC2530DB\..\..\..\..\..\COMPO /
-//                          NENTS\STACK\SAPI\ -I D:\桌面\Demo1\Projects\zstac /
-//                          k\Samples\GenericApp\CC2530DB\..\..\..\..\..\COMP /
-//                          ONENTS\STACK\SYS\ -I D:\桌面\Demo1\Projects\zstac /
-//                          k\Samples\GenericApp\CC2530DB\..\..\..\..\..\COMP /
-//                          ONENTS\STACK\ZDO\ -I D:\桌面\Demo1\Projects\zstac /
-//                          k\Samples\GenericApp\CC2530DB\..\..\..\..\..\COMP /
-//                          ONENTS\ZMAC\F8W\ -I D:\桌面\Demo1\Projects\zstack /
-//                          \Samples\GenericApp\CC2530DB\..\..\..\..\..\COMPO /
-//                          NENTS\ZMAC\ -I D:\桌面\Demo1\Projects\zstack\Samp /
-//                          les\GenericApp\CC2530DB\..\..\..\..\..\COMPONENTS /
-//                          \SERVICES\SADDR\ -I D:\桌面\Demo1\Projects\zstack /
-//                          \Samples\GenericApp\CC2530DB\..\..\..\..\..\COMPO /
-//                          NENTS\SERVICES\SDATA\ -I                          /
-//                          D:\桌面\Demo1\Projects\zstack\Samples\GenericApp\ /
-//                          CC2530DB\..\..\..\..\..\COMPONENTS\MAC\INCLUDE\   /
-//                          -I D:\桌面\Demo1\Projects\zstack\Samples\GenericA /
-//                          pp\CC2530DB\..\..\..\..\..\COMPONENTS\MAC\HIGH_LE /
-//                          VEL\ -I D:\桌面\Demo1\Projects\zstack\Samples\Gen /
-//                          ericApp\CC2530DB\..\..\..\..\..\COMPONENTS\MAC\LO /
-//                          W_LEVEL\srf04\ -I D:\桌面\Demo1\Projects\zstack\S /
-//                          amples\GenericApp\CC2530DB\..\..\..\..\..\COMPONE /
-//                          NTS\MAC\LOW_LEVEL\srf04\SINGLE_CHIP\ -Ohz         /
-//                          --require_prototypes                              /
-//    List file          =  D:\桌面\Demo1\Projects\zstack\Samples\GenericApp\ /
-//                          CC2530DB\CoordinatorEB\List\hal_led.s51           /
+//                          -DREJOIN_POLL_RATE=440 "C:\Texas                  /
+//                          Instruments\ZStack-CC2530-2.3.0-1.4.0\Demo1\Compo /
+//                          nents\hal\target\CC2530EB\hal_led.c" -D ZTOOL_P1  /
+//                          -D MT_TASK -D MT_SYS_FUNC -D MT_ZDO_FUNC -D       /
+//                          LCD_SUPPORTED=DEBUG -lC "C:\Texas                 /
+//                          Instruments\ZStack-CC2530-2.3.0-1.4.0\Demo1\Proje /
+//                          cts\zstack\Samples\GenericApp\CC2530DB\Coordinato /
+//                          rEB\List\" -lA "C:\Texas                          /
+//                          Instruments\ZStack-CC2530-2.3.0-1.4.0\Demo1\Proje /
+//                          cts\zstack\Samples\GenericApp\CC2530DB\Coordinato /
+//                          rEB\List\" --diag_suppress Pe001,Pa010 -o         /
+//                          "C:\Texas Instruments\ZStack-CC2530-2.3.0-1.4.0\D /
+//                          emo1\Projects\zstack\Samples\GenericApp\CC2530DB\ /
+//                          CoordinatorEB\Obj\" -e --debug --core=plain       /
+//                          --dptr=16,1 --data_model=large                    /
+//                          --code_model=banked --calling_convention=xdata_re /
+//                          entrant --place_constants=data_rom                /
+//                          --nr_virtual_regs 16 -I "C:\Texas                 /
+//                          Instruments\ZStack-CC2530-2.3.0-1.4.0\Demo1\Proje /
+//                          cts\zstack\Samples\GenericApp\CC2530DB\" -I       /
+//                          "C:\Texas Instruments\ZStack-CC2530-2.3.0-1.4.0\D /
+//                          emo1\Projects\zstack\Samples\GenericApp\CC2530DB\ /
+//                          ..\SOURCE\" -I "C:\Texas                          /
+//                          Instruments\ZStack-CC2530-2.3.0-1.4.0\Demo1\Proje /
+//                          cts\zstack\Samples\GenericApp\CC2530DB\..\..\..\Z /
+//                          MAIN\TI2530DB\" -I "C:\Texas                      /
+//                          Instruments\ZStack-CC2530-2.3.0-1.4.0\Demo1\Proje /
+//                          cts\zstack\Samples\GenericApp\CC2530DB\..\..\..\. /
+//                          .\..\COMPONENTS\MT\" -I "C:\Texas                 /
+//                          Instruments\ZStack-CC2530-2.3.0-1.4.0\Demo1\Proje /
+//                          cts\zstack\Samples\GenericApp\CC2530DB\..\..\..\. /
+//                          .\..\COMPONENTS\HAL\INCLUDE\" -I "C:\Texas        /
+//                          Instruments\ZStack-CC2530-2.3.0-1.4.0\Demo1\Proje /
+//                          cts\zstack\Samples\GenericApp\CC2530DB\..\..\..\. /
+//                          .\..\COMPONENTS\HAL\TARGET\CC2530EB\" -I          /
+//                          "C:\Texas Instruments\ZStack-CC2530-2.3.0-1.4.0\D /
+//                          emo1\Projects\zstack\Samples\GenericApp\CC2530DB\ /
+//                          ..\..\..\..\..\COMPONENTS\OSAL\MCU\CCSOC\" -I     /
+//                          "C:\Texas Instruments\ZStack-CC2530-2.3.0-1.4.0\D /
+//                          emo1\Projects\zstack\Samples\GenericApp\CC2530DB\ /
+//                          ..\..\..\..\..\COMPONENTS\OSAL\INCLUDE\" -I       /
+//                          "C:\Texas Instruments\ZStack-CC2530-2.3.0-1.4.0\D /
+//                          emo1\Projects\zstack\Samples\GenericApp\CC2530DB\ /
+//                          ..\..\..\..\..\COMPONENTS\STACK\AF\" -I           /
+//                          "C:\Texas Instruments\ZStack-CC2530-2.3.0-1.4.0\D /
+//                          emo1\Projects\zstack\Samples\GenericApp\CC2530DB\ /
+//                          ..\..\..\..\..\COMPONENTS\STACK\NWK\" -I          /
+//                          "C:\Texas Instruments\ZStack-CC2530-2.3.0-1.4.0\D /
+//                          emo1\Projects\zstack\Samples\GenericApp\CC2530DB\ /
+//                          ..\..\..\..\..\COMPONENTS\STACK\SEC\" -I          /
+//                          "C:\Texas Instruments\ZStack-CC2530-2.3.0-1.4.0\D /
+//                          emo1\Projects\zstack\Samples\GenericApp\CC2530DB\ /
+//                          ..\..\..\..\..\COMPONENTS\STACK\SAPI\" -I         /
+//                          "C:\Texas Instruments\ZStack-CC2530-2.3.0-1.4.0\D /
+//                          emo1\Projects\zstack\Samples\GenericApp\CC2530DB\ /
+//                          ..\..\..\..\..\COMPONENTS\STACK\SYS\" -I          /
+//                          "C:\Texas Instruments\ZStack-CC2530-2.3.0-1.4.0\D /
+//                          emo1\Projects\zstack\Samples\GenericApp\CC2530DB\ /
+//                          ..\..\..\..\..\COMPONENTS\STACK\ZDO\" -I          /
+//                          "C:\Texas Instruments\ZStack-CC2530-2.3.0-1.4.0\D /
+//                          emo1\Projects\zstack\Samples\GenericApp\CC2530DB\ /
+//                          ..\..\..\..\..\COMPONENTS\ZMAC\F8W\" -I           /
+//                          "C:\Texas Instruments\ZStack-CC2530-2.3.0-1.4.0\D /
+//                          emo1\Projects\zstack\Samples\GenericApp\CC2530DB\ /
+//                          ..\..\..\..\..\COMPONENTS\ZMAC\" -I "C:\Texas     /
+//                          Instruments\ZStack-CC2530-2.3.0-1.4.0\Demo1\Proje /
+//                          cts\zstack\Samples\GenericApp\CC2530DB\..\..\..\. /
+//                          .\..\COMPONENTS\SERVICES\SADDR\" -I "C:\Texas     /
+//                          Instruments\ZStack-CC2530-2.3.0-1.4.0\Demo1\Proje /
+//                          cts\zstack\Samples\GenericApp\CC2530DB\..\..\..\. /
+//                          .\..\COMPONENTS\SERVICES\SDATA\" -I "C:\Texas     /
+//                          Instruments\ZStack-CC2530-2.3.0-1.4.0\Demo1\Proje /
+//                          cts\zstack\Samples\GenericApp\CC2530DB\..\..\..\. /
+//                          .\..\COMPONENTS\MAC\INCLUDE\" -I "C:\Texas        /
+//                          Instruments\ZStack-CC2530-2.3.0-1.4.0\Demo1\Proje /
+//                          cts\zstack\Samples\GenericApp\CC2530DB\..\..\..\. /
+//                          .\..\COMPONENTS\MAC\HIGH_LEVEL\" -I "C:\Texas     /
+//                          Instruments\ZStack-CC2530-2.3.0-1.4.0\Demo1\Proje /
+//                          cts\zstack\Samples\GenericApp\CC2530DB\..\..\..\. /
+//                          .\..\COMPONENTS\MAC\LOW_LEVEL\srf04\" -I          /
+//                          "C:\Texas Instruments\ZStack-CC2530-2.3.0-1.4.0\D /
+//                          emo1\Projects\zstack\Samples\GenericApp\CC2530DB\ /
+//                          ..\..\..\..\..\COMPONENTS\MAC\LOW_LEVEL\srf04\SIN /
+//                          GLE_CHIP\" -Ohz --require_prototypes              /
+//    List file          =  C:\Texas Instruments\ZStack-CC2530-2.3.0-1.4.0\De /
+//                          mo1\Projects\zstack\Samples\GenericApp\CC2530DB\C /
+//                          oordinatorEB\List\hal_led.s51                     /
 //                                                                            /
 //                                                                            /
 ///////////////////////////////////////////////////////////////////////////////
@@ -407,7 +434,7 @@ HalLedUpdate        SYMBOL "HalLedUpdate"
         FUNCTION ??osal_start_timerEx?relay,00H
         EXTERN Hal_TaskID
 
-// D:\桌面\Demo1\Components\hal\target\CC2530EB\hal_led.c
+// C:\Texas Instruments\ZStack-CC2530-2.3.0-1.4.0\Demo1\Components\hal\target\CC2530EB\hal_led.c
 //    1 /**************************************************************************************************
 //    2   Filename:       hal_led.c
 //    3   Revised:        $Date: 2009-03-13 05:45:44 -0700 (Fri, 13 Mar 2009) $
@@ -1574,14 +1601,14 @@ HalLedOnOff:
         JNZ     ??HalLedOnOff_1
 //  381     {
 //  382       HAL_TURN_ON_LED1();
-        SETB    0x90.0
+        CLR     0x90.0
         SJMP    ??HalLedOnOff_0
 //  383     }
 //  384     else
 //  385     {
 //  386       HAL_TURN_OFF_LED1();
 ??HalLedOnOff_1:
-        CLR     0x90.0
+        SETB    0x90.0
 //  387     }
 //  388   }
 //  389 
@@ -1597,14 +1624,14 @@ HalLedOnOff:
         JNZ     ??HalLedOnOff_3
 //  393     {
 //  394       HAL_TURN_ON_LED2();
-        SETB    0x90.1
+        CLR     0x90.1
         SJMP    ??HalLedOnOff_2
 //  395     }
 //  396     else
 //  397     {
 //  398       HAL_TURN_OFF_LED2();
 ??HalLedOnOff_3:
-        CLR     0x90.1
+        SETB    0x90.1
 //  399     }
 //  400   }
 //  401 
@@ -1620,14 +1647,14 @@ HalLedOnOff:
         JNZ     ??HalLedOnOff_5
 //  405     {
 //  406       HAL_TURN_ON_LED3();
-        SETB    0x90.4
+        CLR     0x90.4
         SJMP    ??HalLedOnOff_4
 //  407     }
 //  408     else
 //  409     {
 //  410       HAL_TURN_OFF_LED3();
 ??HalLedOnOff_5:
-        CLR     0x90.4
+        SETB    0x90.4
 //  411     }
 //  412   }
 //  413 
@@ -1643,14 +1670,14 @@ HalLedOnOff:
         JNZ     ??HalLedOnOff_7
 //  417     {
 //  418       HAL_TURN_ON_LED4();
-        SETB    0x90.0
+        CLR     0x90.0
         SJMP    ??HalLedOnOff_8
 //  419     }
 //  420     else
 //  421     {
 //  422       HAL_TURN_OFF_LED4();
 ??HalLedOnOff_7:
-        CLR     0x90.0
+        SETB    0x90.0
 //  423     }
 //  424   }
 //  425 
@@ -1820,45 +1847,34 @@ HalLedEnterSleep:
         MOV     A,0x90
         MOV     R1,A
 //  478   HalSleepLedState |= HAL_STATE_LED4() << 3;
-        MOV     A,0x90
-        MOV     R2,A
-        MOV     A,R0
-        MOV     C,0xE0 /* A   */.1
-        JNC     ??HalLedEnterSleep_0
         SETB    B.0
-        SJMP    ??HalLedEnterSleep_1
+        MOV     C,0x90.0
+        JNB     B.0,??HalLedEnterSleep_0
+        CPL     C
 ??HalLedEnterSleep_0:
-        CLR     B.0
-??HalLedEnterSleep_1:
+        CLR     A
+        RLC     A
+        RLC     A
+        RLC     A
+        RLC     A
+        MOV     R2,A
         MOV     A,R1
         MOV     C,0xE0 /* A   */.4
-        JNC     ??HalLedEnterSleep_2
-        SETB    B.1
-        SJMP    ??HalLedEnterSleep_3
-??HalLedEnterSleep_2:
-        CLR     B.1
-??HalLedEnterSleep_3:
-        MOV     A,R2
-        MOV     C,0xE0 /* A   */.0
         CLR     A
         RLC     A
         RLC     A
         RLC     A
-        RLC     A
-        MOV     R2,A
-        MOV     C,B.1
-        CLR     A
-        RLC     A
-        RLC     A
-        RLC     A
+        XRL     A,#0x4
         MOV     R1,A
-        MOV     C,B.0
-        CLR     A
-        RLC     A
-        RLC     A
+        MOV     A,#0x2
+        XRL     A,R0
+        ANL     A,#0x2
         MOV     R0,A
         MOV     A,R3
         MOV     C,0xE0 /* A   */.0
+        JNB     B.0,??HalLedEnterSleep_1
+        CPL     C
+??HalLedEnterSleep_1:
         CLR     A
         RLC     A
         ORL     A,R0
@@ -1946,7 +1962,7 @@ HalLedExitSleep:
 //  505 #ifdef BLINK_LEDS
 //  506   /* Sleep OFF */
 //  507   HalLedStatusControl.sleepActive = FALSE;
-        LJMP    ?Subroutine0 & 0xFFFF
+        SJMP    ?Subroutine0
         CFI EndBlock cfiBlock13
 //  508 #endif /* BLINK_LEDS */
 //  509 }
@@ -2013,13 +2029,13 @@ __Constant_64:
 //  515 
 //  516 
 // 
-// 987 bytes in segment BANKED_CODE
+// 973 bytes in segment BANKED_CODE
 //  48 bytes in segment BANK_RELAYS
 //   1 byte  in segment SFR_AN
 //   4 bytes in segment XDATA_ROM_C
 //  40 bytes in segment XDATA_Z
 // 
-// 1 035 bytes of CODE  memory
+// 1 021 bytes of CODE  memory
 //     0 bytes of CONST memory (+ 4 bytes shared)
 //     0 bytes of DATA  memory (+ 1 byte  shared)
 //    40 bytes of XDATA memory

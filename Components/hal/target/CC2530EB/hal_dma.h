@@ -22,7 +22,7 @@
   its documentation for any purpose.
 
   YOU FURTHER ACKNOWLEDGE AND AGREE THAT THE SOFTWARE AND DOCUMENTATION ARE
-  PROVIDED “AS IS” WITHOUT WARRANTY OF ANY KIND, EITHER EXPRESS OR IMPLIED, 
+  PROVIDED “AS IS?WITHOUT WARRANTY OF ANY KIND, EITHER EXPRESS OR IMPLIED, 
   INCLUDING WITHOUT LIMITATION, ANY WARRANTY OF MERCHANTABILITY, TITLE, 
   NON-INFRINGEMENT AND FITNESS FOR A PARTICULAR PURPOSE. IN NO EVENT SHALL
   TEXAS INSTRUMENTS OR ITS LICENSORS BE LIABLE OR OBLIGATED UNDER CONTRACT,
@@ -61,13 +61,13 @@ extern "C"
 #define HAL_DMA_SET_ADDR_DESC0( a ) \
   st( \
     DMA0CFGH = (uint8)( (uint16)(a) >> 8 );  \
-    DMA0CFGL = (uint8)( (uint16)(a) );       \
+    DMA0CFGL = (uint8)( (uint16)(a)&0x00ff );       \
   )
 
 #define HAL_DMA_SET_ADDR_DESC1234( a ) \
   st( \
     DMA1CFGH = (uint8)( (uint16)(a) >> 8 );  \
-    DMA1CFGL = (uint8)( (uint16)(a) );       \
+    DMA1CFGL = (uint8)( (uint16)(a)&0x00ff );       \
   )
 
 #define HAL_DMA_GET_DESC0()           &dmaCh0
@@ -90,14 +90,14 @@ extern "C"
 #define HAL_DMA_SET_SOURCE( pDesc, src ) \
   st( \
     pDesc->srcAddrH = (uint8)((uint16)(src) >> 8); \
-    pDesc->srcAddrL = (uint8)(uint16)(src); \
+   pDesc->srcAddrL = (uint8)((uint16)(src) & 0x00ff);  \
   )
 
 // Macro for quickly setting the destination address of a DMA structure.
 #define HAL_DMA_SET_DEST( pDesc, dst ) \
   st( \
     pDesc->dstAddrH = (uint8)((uint16)(dst) >> 8); \
-    pDesc->dstAddrL = (uint8)(uint16)(dst); \
+    pDesc->dstAddrL = (uint8)((uint16)(dst) & 0x00ff);  \
   )
 
 // Macro for quickly setting the number of bytes to be transferred by the DMA,
