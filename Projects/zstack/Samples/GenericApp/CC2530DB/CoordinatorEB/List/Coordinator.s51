@@ -1,6 +1,6 @@
 ///////////////////////////////////////////////////////////////////////////////
 //                                                                            /
-// IAR C/C++ Compiler V8.10.3.10338/W32 for 8051        18/May/2021  15:26:10 /
+// IAR C/C++ Compiler V8.10.3.10338/W32 for 8051        19/May/2021  10:09:18 /
 // Copyright 2004-2011 IAR Systems AB.                                        /
 //                                                                            /
 //    Core               =  plain                                             /
@@ -9,18 +9,16 @@
 //    Calling convention =  xdata reentrant                                   /
 //    Constant location  =  data_rom                                          /
 //    Dptr setup         =  1,16                                              /
-//    Source file        =  D:\Texas Instruments\ZStack-CC2530-2.3.0-1.4.0\Pr /
-//                          ojects\zstack\Samples\GenericApp\CC2530DB\Coordin /
-//                          ator.c                                            /
-//    Command line       =  -f "D:\Texas Instruments\ZStack-CC2530-2.3.0-1.4. /
-//                          0\Projects\zstack\Samples\GenericApp\CC2530DB\..\ /
-//                          ..\..\Tools\CC2530DB\f8wCoord.cfg" (-DCPU32MHZ    /
-//                          -DROOT=__near_func -DMAC_CFG_APP_PENDING_QUEUE=TR /
-//                          UE -DZDO_COORDINATOR -DRTR_NWK -DBLINK_LEDS) -f   /
-//                          "D:\Texas Instruments\ZStack-CC2530-2.3.0-1.4.0\P /
-//                          rojects\zstack\Samples\GenericApp\CC2530DB\..\..\ /
-//                          ..\Tools\CC2530DB\f8wConfig.cfg" (-DSECURE=0      /
-//                          -DZG_SECURE_DYNAMIC=0 -DREFLECTOR                 /
+//    Source file        =  D:\桌面\Demo1\Projects\zstack\Samples\GenericApp\ /
+//                          Source\Coordinator.c                              /
+//    Command line       =  -f D:\桌面\Demo1\Projects\zstack\Samples\GenericA /
+//                          pp\CC2530DB\..\..\..\Tools\CC2530DB\f8wCoord.cfg  /
+//                          (-DCPU32MHZ -DROOT=__near_func                    /
+//                          -DMAC_CFG_APP_PENDING_QUEUE=TRUE                  /
+//                          -DZDO_COORDINATOR -DRTR_NWK -DBLINK_LEDS) -f      /
+//                          D:\桌面\Demo1\Projects\zstack\Samples\GenericApp\ /
+//                          CC2530DB\..\..\..\Tools\CC2530DB\f8wConfig.cfg    /
+//                          (-DSECURE=0 -DZG_SECURE_DYNAMIC=0 -DREFLECTOR     /
 //                          -DDEFAULT_CHANLIST=0x00001000                     /
 //                          -DZDAPP_CONFIG_PAN_ID=0x2004                      /
 //                          -DNWK_START_DELAY=100 -DEXTENDED_JOINING_RANDOM_M /
@@ -40,91 +38,68 @@
 //                          "-DCONST=const __code" -DGENERIC=__generic        /
 //                          -DRFD_RCVC_ALWAYS_ON=FALSE -DPOLL_RATE=1000       /
 //                          -DQUEUED_POLL_RATE=100 -DRESPONSE_POLL_RATE=100)  /
-//                          -DREJOIN_POLL_RATE=440 "D:\Texas                  /
-//                          Instruments\ZStack-CC2530-2.3.0-1.4.0\Projects\zs /
-//                          tack\Samples\GenericApp\CC2530DB\Coordinator.c"   /
-//                          -D ZTOOL_P1 -D MT_TASK -D MT_SYS_FUNC -D          /
-//                          MT_ZDO_FUNC -D LCD_SUPPORTED=DEBUG -lC "D:\Texas  /
-//                          Instruments\ZStack-CC2530-2.3.0-1.4.0\Projects\zs /
-//                          tack\Samples\GenericApp\CC2530DB\CoordinatorEB\Li /
-//                          st\" -lA "D:\Texas Instruments\ZStack-CC2530-2.3. /
-//                          0-1.4.0\Projects\zstack\Samples\GenericApp\CC2530 /
-//                          DB\CoordinatorEB\List\" --diag_suppress           /
-//                          Pe001,Pa010 -o "D:\Texas                          /
-//                          Instruments\ZStack-CC2530-2.3.0-1.4.0\Projects\zs /
-//                          tack\Samples\GenericApp\CC2530DB\CoordinatorEB\Ob /
-//                          j\" -e --debug --core=plain --dptr=16,1           /
+//                          -DREJOIN_POLL_RATE=440 D:\桌面\Demo1\Projects\zst /
+//                          ack\Samples\GenericApp\Source\Coordinator.c -D    /
+//                          ZTOOL_P1 -D MT_TASK -D MT_SYS_FUNC -D             /
+//                          MT_ZDO_FUNC -D LCD_SUPPORTED=DEBUG -lC            /
+//                          D:\桌面\Demo1\Projects\zstack\Samples\GenericApp\ /
+//                          CC2530DB\CoordinatorEB\List\ -lA                  /
+//                          D:\桌面\Demo1\Projects\zstack\Samples\GenericApp\ /
+//                          CC2530DB\CoordinatorEB\List\ --diag_suppress      /
+//                          Pe001,Pa010 -o D:\桌面\Demo1\Projects\zstack\Samp /
+//                          les\GenericApp\CC2530DB\CoordinatorEB\Obj\ -e     /
+//                          --debug --core=plain --dptr=16,1                  /
 //                          --data_model=large --code_model=banked            /
 //                          --calling_convention=xdata_reentrant              /
 //                          --place_constants=data_rom --nr_virtual_regs 16   /
-//                          -I "D:\Texas Instruments\ZStack-CC2530-2.3.0-1.4. /
-//                          0\Projects\zstack\Samples\GenericApp\CC2530DB\"   /
-//                          -I "D:\Texas Instruments\ZStack-CC2530-2.3.0-1.4. /
-//                          0\Projects\zstack\Samples\GenericApp\CC2530DB\..\ /
-//                          SOURCE\" -I "D:\Texas Instruments\ZStack-CC2530-2 /
-//                          .3.0-1.4.0\Projects\zstack\Samples\GenericApp\CC2 /
-//                          530DB\..\..\..\ZMAIN\TI2530DB\" -I "D:\Texas      /
-//                          Instruments\ZStack-CC2530-2.3.0-1.4.0\Projects\zs /
-//                          tack\Samples\GenericApp\CC2530DB\..\..\..\..\..\C /
-//                          OMPONENTS\MT\" -I "D:\Texas                       /
-//                          Instruments\ZStack-CC2530-2.3.0-1.4.0\Projects\zs /
-//                          tack\Samples\GenericApp\CC2530DB\..\..\..\..\..\C /
-//                          OMPONENTS\HAL\INCLUDE\" -I "D:\Texas              /
-//                          Instruments\ZStack-CC2530-2.3.0-1.4.0\Projects\zs /
-//                          tack\Samples\GenericApp\CC2530DB\..\..\..\..\..\C /
-//                          OMPONENTS\HAL\TARGET\CC2530EB\" -I "D:\Texas      /
-//                          Instruments\ZStack-CC2530-2.3.0-1.4.0\Projects\zs /
-//                          tack\Samples\GenericApp\CC2530DB\..\..\..\..\..\C /
-//                          OMPONENTS\OSAL\MCU\CCSOC\" -I "D:\Texas           /
-//                          Instruments\ZStack-CC2530-2.3.0-1.4.0\Projects\zs /
-//                          tack\Samples\GenericApp\CC2530DB\..\..\..\..\..\C /
-//                          OMPONENTS\OSAL\INCLUDE\" -I "D:\Texas             /
-//                          Instruments\ZStack-CC2530-2.3.0-1.4.0\Projects\zs /
-//                          tack\Samples\GenericApp\CC2530DB\..\..\..\..\..\C /
-//                          OMPONENTS\STACK\AF\" -I "D:\Texas                 /
-//                          Instruments\ZStack-CC2530-2.3.0-1.4.0\Projects\zs /
-//                          tack\Samples\GenericApp\CC2530DB\..\..\..\..\..\C /
-//                          OMPONENTS\STACK\NWK\" -I "D:\Texas                /
-//                          Instruments\ZStack-CC2530-2.3.0-1.4.0\Projects\zs /
-//                          tack\Samples\GenericApp\CC2530DB\..\..\..\..\..\C /
-//                          OMPONENTS\STACK\SEC\" -I "D:\Texas                /
-//                          Instruments\ZStack-CC2530-2.3.0-1.4.0\Projects\zs /
-//                          tack\Samples\GenericApp\CC2530DB\..\..\..\..\..\C /
-//                          OMPONENTS\STACK\SAPI\" -I "D:\Texas               /
-//                          Instruments\ZStack-CC2530-2.3.0-1.4.0\Projects\zs /
-//                          tack\Samples\GenericApp\CC2530DB\..\..\..\..\..\C /
-//                          OMPONENTS\STACK\SYS\" -I "D:\Texas                /
-//                          Instruments\ZStack-CC2530-2.3.0-1.4.0\Projects\zs /
-//                          tack\Samples\GenericApp\CC2530DB\..\..\..\..\..\C /
-//                          OMPONENTS\STACK\ZDO\" -I "D:\Texas                /
-//                          Instruments\ZStack-CC2530-2.3.0-1.4.0\Projects\zs /
-//                          tack\Samples\GenericApp\CC2530DB\..\..\..\..\..\C /
-//                          OMPONENTS\ZMAC\F8W\" -I "D:\Texas                 /
-//                          Instruments\ZStack-CC2530-2.3.0-1.4.0\Projects\zs /
-//                          tack\Samples\GenericApp\CC2530DB\..\..\..\..\..\C /
-//                          OMPONENTS\ZMAC\" -I "D:\Texas                     /
-//                          Instruments\ZStack-CC2530-2.3.0-1.4.0\Projects\zs /
-//                          tack\Samples\GenericApp\CC2530DB\..\..\..\..\..\C /
-//                          OMPONENTS\SERVICES\SADDR\" -I "D:\Texas           /
-//                          Instruments\ZStack-CC2530-2.3.0-1.4.0\Projects\zs /
-//                          tack\Samples\GenericApp\CC2530DB\..\..\..\..\..\C /
-//                          OMPONENTS\SERVICES\SDATA\" -I "D:\Texas           /
-//                          Instruments\ZStack-CC2530-2.3.0-1.4.0\Projects\zs /
-//                          tack\Samples\GenericApp\CC2530DB\..\..\..\..\..\C /
-//                          OMPONENTS\MAC\INCLUDE\" -I "D:\Texas              /
-//                          Instruments\ZStack-CC2530-2.3.0-1.4.0\Projects\zs /
-//                          tack\Samples\GenericApp\CC2530DB\..\..\..\..\..\C /
-//                          OMPONENTS\MAC\HIGH_LEVEL\" -I "D:\Texas           /
-//                          Instruments\ZStack-CC2530-2.3.0-1.4.0\Projects\zs /
-//                          tack\Samples\GenericApp\CC2530DB\..\..\..\..\..\C /
-//                          OMPONENTS\MAC\LOW_LEVEL\srf04\" -I "D:\Texas      /
-//                          Instruments\ZStack-CC2530-2.3.0-1.4.0\Projects\zs /
-//                          tack\Samples\GenericApp\CC2530DB\..\..\..\..\..\C /
-//                          OMPONENTS\MAC\LOW_LEVEL\srf04\SINGLE_CHIP\" -Ohz  /
+//                          -I D:\桌面\Demo1\Projects\zstack\Samples\GenericA /
+//                          pp\CC2530DB\ -I D:\桌面\Demo1\Projects\zstack\Sam /
+//                          ples\GenericApp\CC2530DB\..\SOURCE\ -I            /
+//                          D:\桌面\Demo1\Projects\zstack\Samples\GenericApp\ /
+//                          CC2530DB\..\..\..\ZMAIN\TI2530DB\ -I              /
+//                          D:\桌面\Demo1\Projects\zstack\Samples\GenericApp\ /
+//                          CC2530DB\..\..\..\..\..\COMPONENTS\MT\ -I         /
+//                          D:\桌面\Demo1\Projects\zstack\Samples\GenericApp\ /
+//                          CC2530DB\..\..\..\..\..\COMPONENTS\HAL\INCLUDE\   /
+//                          -I D:\桌面\Demo1\Projects\zstack\Samples\GenericA /
+//                          pp\CC2530DB\..\..\..\..\..\COMPONENTS\HAL\TARGET\ /
+//                          CC2530EB\ -I D:\桌面\Demo1\Projects\zstack\Sample /
+//                          s\GenericApp\CC2530DB\..\..\..\..\..\COMPONENTS\O /
+//                          SAL\MCU\CCSOC\ -I D:\桌面\Demo1\Projects\zstack\S /
+//                          amples\GenericApp\CC2530DB\..\..\..\..\..\COMPONE /
+//                          NTS\OSAL\INCLUDE\ -I D:\桌面\Demo1\Projects\zstac /
+//                          k\Samples\GenericApp\CC2530DB\..\..\..\..\..\COMP /
+//                          ONENTS\STACK\AF\ -I D:\桌面\Demo1\Projects\zstack /
+//                          \Samples\GenericApp\CC2530DB\..\..\..\..\..\COMPO /
+//                          NENTS\STACK\NWK\ -I D:\桌面\Demo1\Projects\zstack /
+//                          \Samples\GenericApp\CC2530DB\..\..\..\..\..\COMPO /
+//                          NENTS\STACK\SEC\ -I D:\桌面\Demo1\Projects\zstack /
+//                          \Samples\GenericApp\CC2530DB\..\..\..\..\..\COMPO /
+//                          NENTS\STACK\SAPI\ -I D:\桌面\Demo1\Projects\zstac /
+//                          k\Samples\GenericApp\CC2530DB\..\..\..\..\..\COMP /
+//                          ONENTS\STACK\SYS\ -I D:\桌面\Demo1\Projects\zstac /
+//                          k\Samples\GenericApp\CC2530DB\..\..\..\..\..\COMP /
+//                          ONENTS\STACK\ZDO\ -I D:\桌面\Demo1\Projects\zstac /
+//                          k\Samples\GenericApp\CC2530DB\..\..\..\..\..\COMP /
+//                          ONENTS\ZMAC\F8W\ -I D:\桌面\Demo1\Projects\zstack /
+//                          \Samples\GenericApp\CC2530DB\..\..\..\..\..\COMPO /
+//                          NENTS\ZMAC\ -I D:\桌面\Demo1\Projects\zstack\Samp /
+//                          les\GenericApp\CC2530DB\..\..\..\..\..\COMPONENTS /
+//                          \SERVICES\SADDR\ -I D:\桌面\Demo1\Projects\zstack /
+//                          \Samples\GenericApp\CC2530DB\..\..\..\..\..\COMPO /
+//                          NENTS\SERVICES\SDATA\ -I                          /
+//                          D:\桌面\Demo1\Projects\zstack\Samples\GenericApp\ /
+//                          CC2530DB\..\..\..\..\..\COMPONENTS\MAC\INCLUDE\   /
+//                          -I D:\桌面\Demo1\Projects\zstack\Samples\GenericA /
+//                          pp\CC2530DB\..\..\..\..\..\COMPONENTS\MAC\HIGH_LE /
+//                          VEL\ -I D:\桌面\Demo1\Projects\zstack\Samples\Gen /
+//                          ericApp\CC2530DB\..\..\..\..\..\COMPONENTS\MAC\LO /
+//                          W_LEVEL\srf04\ -I D:\桌面\Demo1\Projects\zstack\S /
+//                          amples\GenericApp\CC2530DB\..\..\..\..\..\COMPONE /
+//                          NTS\MAC\LOW_LEVEL\srf04\SINGLE_CHIP\ -Ohz         /
 //                          --require_prototypes                              /
-//    List file          =  D:\Texas Instruments\ZStack-CC2530-2.3.0-1.4.0\Pr /
-//                          ojects\zstack\Samples\GenericApp\CC2530DB\Coordin /
-//                          atorEB\List\Coordinator.s51                       /
+//    List file          =  D:\桌面\Demo1\Projects\zstack\Samples\GenericApp\ /
+//                          CC2530DB\CoordinatorEB\List\Coordinator.s51       /
 //                                                                            /
 //                                                                            /
 ///////////////////////////////////////////////////////////////////////////////
@@ -349,38 +324,37 @@ GenericApp_ProcessEvent SYMBOL "GenericApp_ProcessEvent"
         EXTERN ??osal_msg_receive?relay
         FUNCTION ??osal_msg_receive?relay,00H
 
-// D:\Texas Instruments\ZStack-CC2530-2.3.0-1.4.0\Projects\zstack\Samples\GenericApp\CC2530DB\Coordinator.c
-//    1 
-//    2 #include  "OSAL.h"
-//    3 #include  "AF.h"
-//    4 #include  "ZDAPP.h"
-//    5 #include  "ZDObject.h"
-//    6 #include  "ZDProfile.h"
-//    7 #include  <string.h>
-//    8 #include  "Coordinator.h"
-//    9 #include  "DebugTrace.h"
-//   10 #if !defined(WIN32)
-//   11 #include "OnBoard.h"
-//   12 #endif
-//   13 
-//   14 #include "hal_lcd.h"
-//   15 #include "hal_led.h"
-//   16 #include "hal_key.h"
-//   17 #include "hal_uart.h"
-//   18 
+// D:\桌面\Demo1\Projects\zstack\Samples\GenericApp\Source\Coordinator.c
+//    1 #include  "OSAL.h"
+//    2 #include  "AF.h"
+//    3 #include  "ZDAPP.h"
+//    4 #include  "ZDObject.h"
+//    5 #include  "ZDProfile.h"
+//    6 #include  <string.h>
+//    7 #include  "Coordinator.h"
+//    8 #include  "DebugTrace.h"
+//    9 #if !defined(WIN32)
+//   10 #include "OnBoard.h"
+//   11 #endif
+//   12 
+//   13 #include "hal_lcd.h"
+//   14 #include "hal_led.h"
+//   15 #include "hal_key.h"
+//   16 #include "hal_uart.h"
+//   17 
 
         RSEG XDATA_ROM_C:CONST:REORDER:NOROOT(0)
         DATA16
-//   19 const cId_t GenericApp_ClusterList[GENERICAPP_MAX_CLUSTERS] =
+//   18 const cId_t GenericApp_ClusterList[GENERICAPP_MAX_CLUSTERS] =
 GenericApp_ClusterList:
         DW 1
-//   20 {
-//   21 GENERICAPP_CLUSTERID
-//   22 };
+//   19 {
+//   20     GENERICAPP_CLUSTERID
+//   21 };
 
         RSEG XDATA_ROM_C:CONST:REORDER:NOROOT(0)
         DATA8
-//   23 const SimpleDescriptionFormat_t GenericApp_SimpleDesc =
+//   22 const SimpleDescriptionFormat_t GenericApp_SimpleDesc =
 GenericApp_SimpleDesc:
         DB 10
         DATA16
@@ -395,53 +369,53 @@ GenericApp_SimpleDesc:
         DB 0
         DATA16
         DW 0H
-//   24 {
-//   25     GENERICAPP_ENDPOINT,
-//   26     GENERICAPP_PROFID,
-//   27     GENERICAPP_DEVICEID,
-//   28     GENERICAPP_DEVICE_VERSION,
-//   29     GENERICAPP_FLAGS,
-//   30     GENERICAPP_MAX_CLUSTERS,
-//   31     (cId_t *)GenericApp_ClusterList,
-//   32     0,
-//   33     (cId_t *)NULL
-//   34 };
-//   35 
+//   23 {
+//   24     GENERICAPP_ENDPOINT,
+//   25     GENERICAPP_PROFID,
+//   26     GENERICAPP_DEVICEID,
+//   27     GENERICAPP_DEVICE_VERSION,
+//   28     GENERICAPP_FLAGS,
+//   29     GENERICAPP_MAX_CLUSTERS,
+//   30     (cId_t *)GenericApp_ClusterList,
+//   31     0,
+//   32     (cId_t *)NULL
+//   33 };
+//   34 
 
         RSEG XDATA_Z:XDATA:NOROOT(0)
         DATA8
-//   36 endPointDesc_t GenericApp_epDesc;
+//   35 endPointDesc_t GenericApp_epDesc;
 GenericApp_epDesc:
         DS 6
         REQUIRE __INIT_XDATA_Z
 
         RSEG XDATA_Z:XDATA:NOROOT(0)
         DATA8
-//   37 byte GenericApp_TaskID;
+//   36 byte GenericApp_TaskID;
 GenericApp_TaskID:
         DS 1
         REQUIRE __INIT_XDATA_Z
 
         RSEG XDATA_Z:XDATA:NOROOT(0)
         DATA8
-//   38 byte GenericApp_TransID;
+//   37 byte GenericApp_TransID;
 GenericApp_TransID:
         DS 1
         REQUIRE __INIT_XDATA_Z
-//   39 //unsigned char uartbuf[128];
-//   40 
-//   41 void GenericApp_MessageMSGCB(afIncomingMSGPacket_t *pckt );
-//   42 void GenericApp_SendTheMessage(void);
-//   43 //static void rxCB (uint8 port,uint8 event);
-//   44 
+//   38 
+//   39 
+//   40 void GenericApp_MessageMSGCB(afIncomingMSGPacket_t *pckt );
+//   41 void GenericApp_SendTheMessage(void);
+//   42 
+//   43 
 
         RSEG BANKED_CODE:CODE:NOROOT(0)
-//   45 void GenericApp_Init(byte task_id)
+//   44 void GenericApp_Init(byte task_id)
 GenericApp_Init:
         CFI Block cfiBlock0 Using cfiCommon0
         CFI Function GenericApp_Init
         CODE
-//   46 {
+//   45 {
         FUNCALL GenericApp_Init, afRegister
         LOCFRAME ISTACK, 0, STACK
         LOCFRAME PSTACK, 0, STACK
@@ -469,60 +443,55 @@ GenericApp_Init:
         ; Saved register size: 9
         ; Auto size: 0
         MOV     A,R1
-//   47 //    halUARTCfg_t uartConfig;
-//   48     GenericApp_TaskID              =task_id;
+//   46     
+//   47     GenericApp_TaskID              =task_id;
         MOV     DPTR,#GenericApp_TaskID
         MOVX    @DPTR,A
-//   49     GenericApp_TransID             = 0;
+//   48     GenericApp_TransID             = 0;
         MOV     DPTR,#GenericApp_TransID
         CLR     A
         MOVX    @DPTR,A
-//   50     GenericApp_epDesc.endPoint     =GENERICAPP_ENDPOINT;
+//   49     GenericApp_epDesc.endPoint     =GENERICAPP_ENDPOINT;
         MOV     DPTR,#GenericApp_epDesc
         MOV     A,#0xa
         MOVX    @DPTR,A
-//   51     GenericApp_epDesc.task_id      =&GenericApp_TaskID;
+//   50     GenericApp_epDesc.task_id      =&GenericApp_TaskID;
         INC     DPTR
         MOV     A,#GenericApp_TaskID & 0xff
         MOVX    @DPTR,A
         INC     DPTR
         MOV     A,#(GenericApp_TaskID >> 8) & 0xff
         MOVX    @DPTR,A
-//   52     GenericApp_epDesc.simpleDesc   =(SimpleDescriptionFormat_t *)&GenericApp_SimpleDesc;
+//   51     GenericApp_epDesc.simpleDesc   =(SimpleDescriptionFormat_t *)&GenericApp_SimpleDesc;
         INC     DPTR
         MOV     A,#GenericApp_SimpleDesc & 0xff
         MOVX    @DPTR,A
         INC     DPTR
         MOV     A,#(GenericApp_SimpleDesc >> 8) & 0xff
         MOVX    @DPTR,A
-//   53     GenericApp_epDesc.latencyReq   =noLatencyReqs;
+//   52     GenericApp_epDesc.latencyReq   =noLatencyReqs;
         INC     DPTR
         CLR     A
         MOVX    @DPTR,A
-//   54     afRegister( &GenericApp_epDesc);
+//   53     afRegister( &GenericApp_epDesc);
         ; Setup parameters for call to function afRegister
         MOV     R2,#GenericApp_epDesc & 0xff
         MOV     R3,#(GenericApp_epDesc >> 8) & 0xff
         LCALL   ??afRegister?relay
-//   55   
-//   56 /*    uartConfig.configured   =   TRUE;
-//   57     uartConfig.baudRate   =   HAL_UART_BR_115200;
-//   58     uartConfig.flowControl    =   FALSE;
-//   59     uartConfig.callBackFunc   =   rxCB;
-//   60     HalUARTOpen (0, &uartConfig);*/
-//   61 }
+//   54     
+//   55 }
         MOV     R7,#0x1
         LJMP    ?BANKED_LEAVE_XDATA
         CFI EndBlock cfiBlock0
-//   62 
+//   56 
 
         RSEG BANKED_CODE:CODE:NOROOT(0)
-//   63 UINT16 GenericApp_ProcessEvent( byte task_id, UINT16 events )
+//   57 UINT16 GenericApp_ProcessEvent( byte task_id, UINT16 events )
 GenericApp_ProcessEvent:
         CFI Block cfiBlock1 Using cfiCommon0
         CFI Function GenericApp_ProcessEvent
         CODE
-//   64  {
+//   58 {
         FUNCALL GenericApp_ProcessEvent, osal_msg_receive
         LOCFRAME ISTACK, 0, STACK
         LOCFRAME PSTACK, 0, STACK
@@ -587,38 +556,38 @@ GenericApp_ProcessEvent:
         ; Auto size: 0
         MOV     ?V0 + 0,R2
         MOV     ?V0 + 1,R3
-//   65     afIncomingMSGPacket_t *MSGpkt;
-//   66     if ( events & SYS_EVENT_MSG )
+//   59     afIncomingMSGPacket_t *MSGpkt;
+//   60     if ( events & SYS_EVENT_MSG )
         MOV     A,R3
         ANL     A,#0x80
         JZ      ??GenericApp_ProcessEvent_0
-//   67   {
-//   68       MSGpkt = (afIncomingMSGPacket_t *)osal_msg_receive(GenericApp_TaskID);
+//   61     {
+//   62         MSGpkt = (afIncomingMSGPacket_t *)osal_msg_receive(GenericApp_TaskID);
         ; Setup parameters for call to function osal_msg_receive
         SJMP    ??GenericApp_ProcessEvent_1
-//   69       while ( MSGpkt )
-//   70       {
-//   71         switch ( MSGpkt->hdr.event )
+//   63         while ( MSGpkt )
+//   64         {
+//   65             switch ( MSGpkt->hdr.event )
 ??GenericApp_ProcessEvent_2:
         MOV     DPL,R6
         MOV     DPH,R7
         MOVX    A,@DPTR
         XRL     A,#0x1a
         JNZ     ??GenericApp_ProcessEvent_3
-//   72       {
-//   73           case AF_INCOMING_MSG_CMD:
-//   74             GenericApp_MessageMSGCB( MSGpkt );
+//   66             {
+//   67             case AF_INCOMING_MSG_CMD:
+//   68                 GenericApp_MessageMSGCB( MSGpkt );
         ; Setup parameters for call to function GenericApp_MessageMSGCB
         MOV     A,R6
         MOV     R2,A
         MOV     A,R7
         MOV     R3,A
         LCALL   ??GenericApp_MessageMSGCB?relay
-//   75             break;
-//   76           default:
-//   77             break;
-//   78       }
-//   79       osal_msg_deallocate( (uint8 *) MSGpkt );
+//   69                 break;
+//   70             default:
+//   71                 break;
+//   72             }
+//   73             osal_msg_deallocate( (uint8 *) MSGpkt );
 ??GenericApp_ProcessEvent_3:
         ; Setup parameters for call to function osal_msg_deallocate
         MOV     A,R6
@@ -626,8 +595,8 @@ GenericApp_ProcessEvent:
         MOV     A,R7
         MOV     R3,A
         LCALL   ??osal_msg_deallocate?relay
-//   80       MSGpkt = (afIncomingMSGPacket_t *)osal_msg_receive
-//   81       ( GenericApp_TaskID );
+//   74             MSGpkt = (afIncomingMSGPacket_t *)osal_msg_receive
+//   75                 ( GenericApp_TaskID );
         ; Setup parameters for call to function osal_msg_receive
 ??GenericApp_ProcessEvent_1:
         MOV     DPTR,#GenericApp_TaskID
@@ -638,18 +607,18 @@ GenericApp_ProcessEvent:
         MOV     ?V0 + 3,R3
         MOV     R6,?V0 + 2
         MOV     R7,?V0 + 3
-//   82      }
+//   76         }
         MOV     A,R6
         ORL     A,R7
         JNZ     ??GenericApp_ProcessEvent_2
-//   83      return (events^SYS_EVENT_MSG);
+//   77         return (events^SYS_EVENT_MSG);
         MOV     R2,?V0 + 0
         MOV     A,?V0 + 1
         XRL     A,#0x80
         MOV     R3,A
         SJMP    ??GenericApp_ProcessEvent_4
-//   84     }
-//   85     return 0 ;
+//   78     }
+//   79     return 0 ;
 ??GenericApp_ProcessEvent_0:
         MOV     R2,#0x0
         MOV     R3,#0x0
@@ -657,15 +626,15 @@ GenericApp_ProcessEvent:
         MOV     R7,#0x4
         LJMP    ?BANKED_LEAVE_XDATA
         CFI EndBlock cfiBlock1
-//   86  }
+//   80 }
 
         RSEG BANKED_CODE:CODE:NOROOT(0)
-//   87 void GenericApp_MessageMSGCB( afIncomingMSGPacket_t *pkt)
+//   81 void GenericApp_MessageMSGCB( afIncomingMSGPacket_t *pkt)
 GenericApp_MessageMSGCB:
         CFI Block cfiBlock2 Using cfiCommon0
         CFI Function GenericApp_MessageMSGCB
         CODE
-//   88 {
+//   82 {
         FUNCALL GenericApp_MessageMSGCB, osal_memcpy
         LOCFRAME ISTACK, 0, STACK
         LOCFRAME PSTACK, 0, STACK
@@ -719,7 +688,7 @@ GenericApp_MessageMSGCB:
         MOV     A,#-0x4
         LCALL   ?ALLOC_XSTACK8
         CFI CFA_XSP16 add(XSP16, 15)
-//   89     unsigned char buffer[4]=" ";
+//   83     unsigned char buffer[4]=" ";
         MOV     DPL,?XSP + 0
         MOV     DPH,?XSP + 1
         MOV     R4,DPL
@@ -728,7 +697,7 @@ GenericApp_MessageMSGCB:
         MOV     DPL,#`?<Constant " ">` & 0xff
         MOV     A,#0x4
         LCALL   ?MOVE_LONG8_XDATA_XDATA
-//   90     switch ( pkt->clusterId )
+//   84     switch ( pkt->clusterId )
         MOV     DPL,R2
         MOV     DPH,R3
         INC     DPTR
@@ -742,9 +711,9 @@ GenericApp_MessageMSGCB:
         MOVX    A,@DPTR
 ??GenericApp_MessageMSGCB_0:
         JNZ     ??GenericApp_MessageMSGCB_1
-//   91 {
-//   92     case GENERICAPP_CLUSTERID:
-//   93       osal_memcpy(buffer,pkt->cmd.Data,3);
+//   85     {
+//   86     case GENERICAPP_CLUSTERID:
+//   87         osal_memcpy(buffer,pkt->cmd.Data,3);
         ; Setup parameters for call to function osal_memcpy
         MOV     A,R2
         ADD     A,#0x21
@@ -771,7 +740,7 @@ GenericApp_MessageMSGCB:
         MOV     A,#0x3
         LCALL   ?DEALLOC_XSTACK8
         CFI CFA_XSP16 add(XSP16, 15)
-//   94       if((buffer[0]=='L')||(buffer[1]=='E')||(buffer[2]=='D'))
+//   88         if((buffer[0]=='L')||(buffer[1]=='E')||(buffer[2]=='D'))
         MOV     DPL,?XSP + 0
         MOV     DPH,?XSP + 1
         MOVX    A,@DPTR
@@ -787,8 +756,8 @@ GenericApp_MessageMSGCB:
         MOVX    A,@DPTR
         XRL     A,#0x44
         JNZ     ??GenericApp_MessageMSGCB_3
-//   95         {
-//   96             HalLedBlink(HAL_LED_2,0,50,500);
+//   89         {
+//   90             HalLedBlink(HAL_LED_2,0,50,500);
 ??GenericApp_MessageMSGCB_2:
         ; Setup parameters for call to function HalLedBlink
         MOV     R4,#-0xc
@@ -798,20 +767,20 @@ GenericApp_MessageMSGCB:
         MOV     R1,#0x2
         LCALL   ??HalLedBlink?relay
         SJMP    ??GenericApp_MessageMSGCB_1
-//   97         }
-//   98         else
-//   99         {
-//  100             HalLedSet(HAL_LED_2,HAL_LED_MODE_ON);
+//   91         }
+//   92         else
+//   93         {
+//   94             HalLedSet(HAL_LED_2,HAL_LED_MODE_ON);
 ??GenericApp_MessageMSGCB_3:
         ; Setup parameters for call to function HalLedSet
         MOV     R2,#0x1
         MOV     R1,#0x2
         LCALL   ??HalLedSet?relay
-//  101         }
-//  102      break;
-//  103 
-//  104     }
-//  105 }
+//   95         }
+//   96         break;
+//   97         
+//   98     }
+//   99 }
 ??GenericApp_MessageMSGCB_1:
         MOV     A,#0x4
         LCALL   ?DEALLOC_XSTACK8
@@ -845,23 +814,6 @@ GenericApp_MessageMSGCB:
         DB 0, 0
 
         END
-//  106 /*>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
-//  107 
-//  108 * 函数名  ：rxCB
-//  109 * 参数    ：uint8 port,uint8 event
-//  110 * 返回    ：static void
-//  111 * 作者    ：chenjialing
-//  112 * 时间    ：2021/5/17
-//  113 * 描述    ：函数说明
-//  114 ----------------------------------------------------------------*/
-//  115 /*static void rxCB (uint8 port,uint8 event)
-//  116 {
-//  117     HalUARTRead(0,uartbuf,16);
-//  118     if(osal_memcmp(uartbuf,"www.wlwmaker.com",16))
-//  119     {
-//  120         HalUARTWrite(0,uartbuf,16);
-//  121     }
-//  122 }*/ 
 // 
 // 285 bytes in segment BANKED_CODE
 //  18 bytes in segment BANK_RELAYS
